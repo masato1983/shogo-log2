@@ -1,7 +1,7 @@
 {
-    "name": "shogo-log1",
+    "name": "shogo-log2",
     "version": "1.0.0",
-    "description": "初級Ex 石井総合内科クリニック",
+    "description": "【即戦力編】Photoshopデザインカンプからのコーディング練習",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -55,7 +55,7 @@
         "zip:all": "run-p zip:css zip:js zip:svg",
         "prepare:all": "run-p min:js min:css delete:map",
         "cachebusting": "gulp cacheBusting",
-        "subset:unicode": "glyphhanger https://shogo-log1.coding11ty.com",
+        "subset:unicode": "glyphhanger https://shogo-log2.coding11ty.com",
         "subset:fonttools:otf": "pyftsubset src/assets/font/original/NotoSansJP-Bold.otf --layout-features=* --unicodes-file=src/assets/font/specify/specify-unicode.txt --output-file=src/assets/font/output/NotoSansJP-Bold-subset.otf --verbose",
         "subset:fonttools:woff": "pyftsubset src/assets/font/original/NotoSansJP-Bold.otf --flavor=woff --layout-features=* --unicodes-file=src/assets/font/specify/specify-unicode.txt --output-file=src/assets/font/output/NotoSansJP-Bold-subset.woff --verbose",
         "subset:fonttools:woff2": "pyftsubset src/assets/font/original/NotoSansJP-Bold.otf --flavor=woff2 --layout-features=* --unicodes-file=src/assets/font/specify/specify-unicode.txt --output-file=src/assets/font/output/NotoSansJP-Bold-subset.woff2 --verbose",
@@ -65,15 +65,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/masato1983/shogo-log1.git"
+        "url": "git+https://github.com/masato1983/shogo-log2.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/masato1983/shogo-log1/issues"
+        "url": "https://github.com/masato1983/shogo-log2/issues"
     },
-    "homepage": "https://github.com/masato1983/shogo-log1#readme",
+    "homepage": "https://github.com/masato1983/shogo-log2#readme",
     "devDependencies": {
         "@babel/core": "7.16.12",
         "@babel/preset-env": "7.16.11",
