@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Text component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+// ==========================================================================
+// Common modifier
+// ==========================================================================
+
+/* primary modifier */
+.c-text--primary {
+  color: var(--color-primary-mid);
+}
+
+/* white modifier */
+.c-text--white {
+  color: var(--color-neutral-lightest);
+}
+
+/* bold modifier */
+.c-text--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* narrow modifier */
+.c-text--narrow {
+  letter-spacing: var(--letter-spacing-narrow);
+}
+
+/* extra-loose modifier */
+.c-text--extra-loose {
+  line-height: var(--line-height-extra-loose);
+}
+
+/* underline modifier */
+.c-text--underline {
+  display: inline-block;
+  background: linear-gradient(transparent 70%, var(--color-primary-lighter) 70%);
+}
+
+/* link modifier */
+.c-text--link {
+  display: inline;
+  color: var(--color-link);
+}
+
+/* hover modifier */
+.c-text--hover {
+  transition: color 0.3s var(--ease-in-out-cubic);
+
+  @include hover {
+    color: var(--color-neutral-lighter);
+
+    &::before,
+    &::after {
+      color: var(--color-neutral-lighter);
+    }
+  }
+
+  &::before,
+  &::after {
+    transition: color 0.3s var(--ease-in-out-cubic);
+  }
+}
+
+/* japanese vertical */
+.c-text--vertical {
+  writing-mode: vertical-rl;
+}
+
+// ==========================================================================
+// 2xs, xs, sm, md, lg, xl, 2xl size
+// ==========================================================================
+
+/* 2xs size */
+.c-text__2xs {
+  font-size: var(--font-size-2xs);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+/* xs size */
+.c-text__xs {
+  font-size: var(--font-size-xs);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+/* sm size */
+.c-text__sm {
+  font-size: var(--font-size-sm);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+/* md size */
+.c-text__md {
+  &--center {
+    text-align: center;
+  }
+}
+
+/* xl size */
+.c-text__xl {
+  font-size: var(--font-size-xl);
+
+  @include mq($from: tablet) {
+    font-size: calc((var(--font-size-xl) + var(--font-size-3xl)) / 2);
+  }
+
+  @include mq($from: desktop) {
+    font-size: var(--font-size-3xl);
+  }
+}

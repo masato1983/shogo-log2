@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Badge component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* badge style */
+.c-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fs-rem(80px);
+  padding: fs-rem(4px) fs-rem(0);
+  white-space: nowrap;
+  background-color: var(--color-neutral-mid);
+  border-radius: fs-rem(0);
+}

@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Logo component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* header, footer logo */
+.c-logo__header,
+.c-logo__footer {
+  width: fs-rem(146px);
+  overflow: hidden; // Workaround for sideways scrolling problem in ie11
+
+  @include mq($from: desktop) {
+    width: fs-rem(186px);
+  }
+
+  @include mq($from: full) {
+    width: fs-rem(263px);
+  }
+}

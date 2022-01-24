@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Global-custom-property base
+   ========================================================================== */
+
+@use '../abstracts/' as *;
+@use 'sass:color' as *;
+
+:root {
+  /* primary color */
+  --color-primary-mid: #21a937;
+  --color-primary-mid-alpha-low: rgba(33, 169, 55, 0.8); // IE11 does not support the alpha-value as percent
+  --color-primary-mid-alpha-high: rgba(33, 169, 55, 0.35); // IE11 does not support the alpha-value as percent
+  --color-primary-mid-alpha-extra-high: rgba(33, 169, 55, 0.05); // IE11 does not support the alpha-value as percent
+  --color-primary-lighter: #99e5a5;
+  --color-primary-light: #f5fcf8;
+
+  /* secondary color */
+  --color-secondary-mid: #52442f;
+
+  /* neutral color */
+  --color-neutral-darken: #000;
+  --color-neutral-darker: #333;
+  --color-neutral-mid: #444;
+  --color-neutral-lighter: #c9c9c9;
+  --color-neutral-extra-lighter: #e7e7e7;
+  --color-neutral-lightest: #fff;
+
+  /* other color */
+  --color-warning: #d94747;
+  --color-accent: #ff9800;
+  --color-accent-alpha-low: rgba(255, 152, 0, 0.7); // IE11 does not support the alpha-value as percent
+  --color-link: #4895e6;
+  --color-checkbox: #4895e6;
+  --color-focus-alpha: rgba(13, 110, 253, 0.5); // IE11 does not support the alpha-value as percent
+  --color-box-shadow: rgba(0, 0, 0, 0.16); // IE11 does not support the alpha-value as percent
+
+  /* font-family */
+  --font-family-primary: 'Noto Sans JP', sans-serif;
+  --font-family-secondary: 'Montserrat', sans-serif;
+
+  /* font-size (postcss-rem) */
+  --font-size-2xs: rem(11px);
+  --font-size-xs: rem(12px);
+  --font-size-sm: rem(14px);
+  --font-size-md: rem(16px);
+  --font-size-lg: rem(18px);
+  --font-size-xl: rem(20px);
+  --font-size-2xl: rem(22px);
+  --font-size-3xl: rem(24px);
+  --font-size-4xl: rem(26px);
+  --font-size-5xl: rem(28px);
+  --font-size-6xl: rem(30px);
+  --font-size-7xl: rem(32px);
+  --font-size-8xl: rem(34px);
+  --font-size-9xl: rem(36px);
+  --font-size-10xl: rem(38px);
+
+  /* font-weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* letter-spacing */
+  --letter-spacing-narrow: -0.03em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.08em;
+  --letter-spacing-widest: 0.2em;
+
+  /* line-height */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  --line-height-extra-loose: 2.375;
+
+  /* line-height one-line(default) Noto Serif JP */
+  --line-height-noto-1: calc(17 / 12);
+  --line-height-noto-2: calc(20 / 14);
+  --line-height-noto-3: calc(24 / 16);
+  --line-height-noto-4: calc(26 / 18);
+  --line-height-noto-5: calc(29 / 20);
+  --line-height-noto-6: calc(32 / 22);
+  --line-height-noto-7: calc(35 / 24);
+  --line-height-noto-8: calc(37 / 26);
+  --line-height-noto-9: calc(40 / 28);
+  --line-height-noto-10: calc(44 / 30);
+  --line-height-noto-11: calc(46 / 32);
+  --line-height-noto-12: calc(49 / 34);
+  --line-height-noto-13: calc(52 / 36);
+  --line-height-noto-14: calc(55 / 38);
+  --line-height-noto-15: calc(58 / 40);
+  --line-height-noto-16: calc(61 / 42);
+
+  /* line-height one-line(default) Lora */
+  --line-height-lora-3: calc(15 / 12);
+  --line-height-lora-4: calc(18 / 14);
+  --line-height-lora-5: calc(20 / 16);
+  --line-height-lora-6: calc(23 / 18);
+  --line-height-lora-7: calc(31 / 24);
+  --line-height-lora-8: calc(33 / 26);
+  --line-height-lora-9: calc(41 / 32);
+  --line-height-lora-10: calc(61 / 48);
+  --line-height-lora-11: calc(92 / 72);
+
+  /* line-height one-line(default) Montserrat */
+  --line-height-montserrat-3: calc(15 / 12);
+  --line-height-montserrat-4: calc(18 / 14);
+  --line-height-montserrat-5: calc(19 / 16);
+  --line-height-montserrat-6: calc(22 / 18);
+  --line-height-montserrat-7: calc(24 / 20);
+  --line-height-montserrat-8: calc(27 / 22);
+  --line-height-montserrat-9: calc(29 / 24);
+  --line-height-montserrat-10: calc(32 / 26);
+  --line-height-montserrat-11: calc(34 / 28);
+  --line-height-montserrat-12: calc(37 / 30);
+  --line-height-montserrat-13: calc(39 / 32);
+  --line-height-montserrat-14: calc(42 / 34);
+  --line-height-montserrat-15: calc(44 / 36);
+  --line-height-montserrat-16: calc(58 / 48);
+  --line-height-montserrat-17: calc(88 / 72);
+
+  /* z-index */
+  --z-index-base: 0;
+  --z-index-above: 10;
+  --z-index-below: -10;
+  --z-index-header: calc(var(--z-index-base) + var(--z-index-above)); // z-index: 10
+
+  /* easing timing function (https://www.npmjs.com/package/easings-css) */
+  --ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+  --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

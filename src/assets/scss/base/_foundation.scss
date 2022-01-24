@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Foundation base
+   ========================================================================== */
+
+@use '../abstracts/' as *;
+@use 'sass:math' as *;
+
+html {
+  background-color: var(--color-neutral-lightest);
+}
+
+body {
+  color: var(--color-neutral-mid);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-primary);
+  line-height: var(--line-height-noto-2);
+  letter-spacing: var(--letter-spacing-normal);
+  hyphens: auto;
+  hanging-punctuation: allow-end;
+  text-size-adjust: 100%;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-break: loose;
+  text-rendering: geometricPrecision;
+
+  @include mq($from: tablet) {
+    font-size: calc((var(--font-size-sm) + var(--font-size-md)) / 2);
+    line-height: calc((var(--line-height-noto-2) + var(--line-height-noto-3)) / 2);
+  }
+
+  @include mq($from: desktop) {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-noto-3);
+  }
+}
+
+main {
+  flex-grow: 1; // Keep the footer at the bottom
+  overflow-x: hidden; // Workaround the appearance of horizontal scroll bar in ie11
+}
+
+a,
+button {
+  @include focus;
+
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+dt {
+  font-weight: normal;
+}

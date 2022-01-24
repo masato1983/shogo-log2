@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Top-message project
+   ========================================================================== */
+
+@use '../../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* overview style */
+.p-top-message {
+  padding: fs-rem(82px) fs-rem(0) fs-rem(82px);
+  background-color: var(--color-neutral-lightest);
+
+  @include mq($from: tablet) {
+    padding: fs-rem(120px) fs-rem(0) fs-rem(82px);
+  }
+
+  @include mq($from: wide) {
+    padding: fs-rem(162px) fs-rem(0) fs-rem(82px);
+  }
+}
+
+/* inner layout */
+.p-top-message__inner {
+  @include mq($from: tablet) {
+    display: flex;
+  }
+}
+
+/* body layout */
+.p-top-message__body {
+  @include mq($from: tablet) {
+    width: div(490px, 1180px) * 100%;
+    margin-top: fs-rem(32px);
+    padding-right: fs-rem(24px);
+  }
+
+  @include mq($from: wide) {
+    padding-left: fs-rem(32px);
+  }
+}
+
+/* title layout */
+.p-top-message__title {
+  text-align: center;
+
+  @include mq($from: tablet) {
+    text-align: left;
+  }
+}
+
+/* Adjust vertical space */
+.p-top-message__break {
+  &:nth-of-type(n+2) {
+    margin-top: fs-rem(16px);
+
+    @include mq($from: tablet) {
+      margin-top: fs-rem(24px);
+    }
+
+    @include mq($from: wide) {
+      margin-top: fs-rem(30px);
+    }
+  }
+}
+
+/* text layout */
+.p-top-message__text {
+  margin-top: fs-rem(29px);
+  text-align: center;
+
+  @include mq($from: tablet) {
+    text-align: left;
+  }
+
+  span {
+    @include mq($from: wide) {
+      display: block;
+    }
+  }
+}
+
+/* media layout */
+.p-top-message__media {
+  flex-grow: 1;
+  margin-top: fs-rem(32px);
+
+  @include mq($from: tablet) {
+    @include fs-aspect-ratio(div(690px, 420px));
+
+    margin-top: fs-rem(0);
+  }
+}
+
+/* image layout */
+.p-top-message__image {
+  border-radius: fs-rem(10px);
+
+  @include mq($from: tablet) {
+    @include fs-absolute-fill;
+
+    object-fit: cover;
+  }
+}

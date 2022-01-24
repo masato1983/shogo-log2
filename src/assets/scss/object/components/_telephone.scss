@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Telephone component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* icon style */
+.c-telephone__icon {
+  width: fs-rem(24px);
+  overflow: hidden; // Workaround for sideways scrolling problem in ie11
+
+  @include mq($from: tablet) {
+    width: fs-rem(div(24px + 32px, 2));
+  }
+
+  @include mq($from: desktop) {
+    width: fs-rem(32px);
+  }
+}
+
+/* number layout */
+.c-telephone__number {
+  margin-left: fs-rem(4px);
+  padding-bottom: fs-rem(2px);
+
+  @include mq($from: tablet) {
+    margin-left: fs-rem(6px);
+  }
+
+  @include mq($from: desktop) {
+    margin-left: fs-rem(12px);
+  }
+}

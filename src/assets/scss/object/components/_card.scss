@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Card component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* card overview */
+.c-card {
+  display: flex; // Required when adding a background color style to a textbox.
+  flex-direction: column; // Required when adding a background color style to a textbox.
+  width: 100%;
+}
+
+/* inner style */
+.c-card__inner {
+  display: flex; // Push the button to the bottom of the text box
+  flex-direction: column; // Push the button to the bottom of the text box
+  flex-grow: 1; // Required when adding a background color style to a textbox.
+  padding: fs-rem(39px) fs-rem(36px) fs-rem(0);
+  background-color: var(--color-neutral-lightest);
+  border: fs-rem(2px) solid var(--color-neutral-lighter);
+  border-radius: fs-rem(10px);
+
+  // only tablet style
+  @include mq($from: tablet, $until: desktop) {
+    flex-direction: row;
+    align-items: center;
+    padding: fs-rem(24px);
+  }
+}
+
+/* body layout */
+.c-card__body {
+  margin-bottom: fs-rem(24px);
+
+  // only tablet style
+  @include mq($from: tablet, $until: desktop) {
+    flex-grow: 1;
+    margin-bottom: fs-rem(0);
+  }
+}
+
+/* media layout */
+.c-card__media {
+  @include fs-aspect-ratio(div(187, 187));
+
+  width: 80%;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+
+  // only tablet style
+  @include mq($from: tablet, $until: desktop) {
+    flex-shrink: 0;
+    width: fs-rem(187px);
+    margin: auto;
+    margin-left: fs-rem(24px);
+  }
+
+  // more than desktop
+  @include mq($from: desktop) {
+    width: fs-rem(187px);
+  }
+
+  // image layout
+  .c-card__image {
+    @include fs-absolute-fill;
+
+    object-fit: cover;
+  }
+}
+
+.c-card__title {
+  text-align: center;
+
+  // only tablet style
+  @include mq($from: tablet, $until: desktop) {
+    text-align: left;
+  }
+}
+
+/* description layout */
+.c-card__description {
+  margin-top: fs-rem(36px);
+
+  // only tablet style
+  @include mq($from: tablet, $until: desktop) {
+    margin-top: fs-rem(24px);
+  }
+}

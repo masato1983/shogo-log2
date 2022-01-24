@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Heading component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* h1 */
+.c-heading__level1 {
+  @include fs-scale(font-size, (360px: 16px, 1920px: 28px));
+
+  letter-spacing: var(--letter-spacing-widest);
+
+  // center modifier
+  &--center {
+    text-align: center;
+  }
+}
+
+/* h2, h3 */
+.c-heading__level2,
+.c-heading__level3 {
+  font-size: var(--font-size-xl);
+
+  @include mq($from: tablet) {
+    font-size: calc((var(--font-size-xl) + var(--font-size-3xl)) / 2);
+  }
+
+  @include mq($from: desktop) {
+    font-size: var(--font-size-3xl);
+  }
+
+  // center modifier
+  &--center {
+    text-align: center;
+  }
+}

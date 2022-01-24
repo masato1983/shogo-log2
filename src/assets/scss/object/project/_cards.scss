@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Cards project
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* cards layout 1-column */
+.p-cards {
+  .p-cards__item {
+    @include mq($until: desktop) {
+      width: div(100%, 1);
+
+      &:nth-child(n+2) {
+        margin-top: fs-rem(48px);
+      }
+    }
+  }
+}
+
+/* cards layout 2-column */
+.p-cards--col2 {
+  @include mq($from: desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: fs-rem(-20px);
+  }
+
+  .p-cards__item {
+    @include mq($from: desktop) {
+      width: div(100%, 2);
+      padding-left: fs-rem(20px);
+
+      &:nth-child(n+3) {
+        margin-top: fs-rem(40px);
+      }
+    }
+  }
+}
+
+/* cards layout 3-column */
+.p-cards--col3 {
+  @include mq($from: desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: fs-rem(-20px);
+  }
+
+  .p-cards__item {
+    @include mq($from: desktop) {
+      width: div(100%, 3);
+      padding-left: fs-rem(20px);
+
+      &:nth-child(n+4) {
+        margin-top: fs-rem(40px);
+      }
+    }
+  }
+}

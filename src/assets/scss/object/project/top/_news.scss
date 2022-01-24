@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Top-news project
+   ========================================================================== */
+
+@use '../../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* overview */
+.p-top-news {
+  padding-bottom: fs-rem(112px);
+  background-color: var(--color-primary-light);
+}
+
+/* title layout */
+.p-top-news__title {
+  text-align: center;
+}
+
+/* body layout */
+.p-top-news__body {
+  margin-top: fs-rem(40px);
+  padding: fs-rem(24px) fs-rem(32px);
+  background-color: var(--color-neutral-lightest);
+  border-radius: fs-rem(10px);
+  box-shadow: fs-rem(0) fs-rem(3px) fs-rem(6px) var(--color-box-shadow);
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(70px);
+    padding: fs-rem(42px) fs-rem(66px) fs-rem(44px);
+    border-radius: fs-rem(30px);
+  }
+}
+
+/* more-wrapper layout */
+.p-top-news__more-wrapper {
+  margin-top: fs-rem(38px);
+  margin-right: fs-rem(-16px);
+  text-align: right;
+}
+
+/* more layout */
+.p-top-news__more {
+  display: inline-flex;
+  align-items: center;
+
+  @include hover {
+    &::after {
+      border-color: transparent transparent transparent var(--color-neutral-lighter);
+    }
+  }
+
+  &::after {
+    @include fs-triangle((14px, 10px), var(--color-neutral-mid), right);
+
+    margin-left: fs-rem(6px);
+    transition: border-color 0.3s var(--ease-in-out-cubic);
+    content: '';
+  }
+}

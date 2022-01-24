@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Top-key-visual project
+   ========================================================================== */
+
+@use '../../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* key-visual overview */
+.p-top-kv {
+  background-color: var(--color-neutral-lightest);
+}
+
+/* inner layout */
+.p-top-kv__inner {
+  position: relative;
+}
+
+/* media layout */
+.p-top-kv__media {
+  width: 100%;
+  height: fs-rem(420px);
+
+  @include mq($from: tablet) {
+    @include fs-aspect-ratio(div(1920px, 1200px));
+
+    height: auto;
+  }
+
+  @include mq($from: desktop) {
+    @include fs-aspect-ratio(div(1920px, 947px));
+  }
+}
+
+/* image layout */
+.p-top-kv__image {
+  @include fs-absolute-fill;
+
+  object-fit: cover;
+  object-position: 80% 50%;
+}
+
+/* body layout */
+.p-top-kv__body {
+  @include fs-scale(left, (360px: 14px, 1920px: 211px));
+  @include fs-scale(top, (360px: 18px, 1920px: 133px));
+
+  position: absolute;
+  writing-mode: vertical-rl;
+}
+
+/* copy layout */
+.p-top-kv__copy {
+  @include fs-scale(padding-top, (360px: 14px, 1920px: 25px));
+  @include fs-scale(padding-bottom, (360px: 32px, 1920px: 70px));
+  @include fs-scale((padding-left, padding-right), (360px: 8px, 1920px: 30px));
+
+  background-color: var(--color-neutral-lightest);
+
+  &:nth-of-type(n+2) {
+    @include fs-scale(margin-right, (360px: 16px, 1920px: 80px));
+  }
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Container layout
+   ========================================================================== */
+
+@use '../abstracts/' as *;
+
+/* base container */
+.l-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* xs & small & large common modifier */
+.l-container--xs,
+.l-container--sm,
+.l-container--md {
+  width: calc(324px / 360px * 100%); // 90%
+}
+
+/* xs modifier */
+.l-container--xs {
+  @include mq($from: landscape) {
+    max-width: fs-rem(560px);
+  }
+
+  @include mq($from: tablet) {
+    max-width: fs-rem(960px);
+  }
+}
+
+/* small modifier */
+.l-container--sm {
+  @include mq($from: landscape) {
+    max-width: fs-rem(560px);
+  }
+
+  @include mq($from: tablet) {
+    max-width: fs-rem(1080px);
+  }
+}
+
+/* medium modifier */
+.l-container--md {
+  @include mq($from: landscape) {
+    max-width: fs-rem(560px);
+  }
+
+  @include mq($from: tablet) {
+    max-width: fs-rem(1180px);
+  }
+}
+
+/* large modifier */
+.l-container--lg {
+  max-width: fs-rem(1920px);
+}
+
+/* xl modifier */
+.l-container--xl {
+  max-width: fs-rem(2560px);
+}

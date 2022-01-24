@@ -1,0 +1,63 @@
+{
+    "path": {
+        "root": "/",
+        "js": "/assets/js/",
+        "css": "/assets/css/",
+        "img:common": "/assets/img/common/",
+        "img:ogp": "/assets/img/ogp/",
+        "img:top": "/assets/img/top/",
+        "img:error": "/assets/img/error/"
+    },
+    "breakpoints": {
+        "mobile": "320px",
+        "landscape": "540px",
+        "tablet": "700px",
+        "desktop": "980px",
+        "wide": "1300px",
+        "full": "1920px"
+    },
+    "common": {
+        "siteName": "石井総合内科クリニック",
+        "og:site_name": "石井総合内科クリニック",
+        "og:locale": "ja_JP",
+        "og:locale:alternate": "en_US",
+        "twitter:card": "summary_large_image",
+        "twitter:site": "",
+        "twitter:creator": "",
+        "fb:app_id": ""
+    },
+    "top": {
+        "prefix": "og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#",
+        "title": "Top",
+        "description": "石井総合内科は山形県山形市七日町の総合内科です",
+        "keywords": "",
+        "og:type": "website",
+        "og:url": "https://shogo-log1.coding11ty.com",
+        "og:image": "ogp-1200x630.jpg",
+        "og:image:secure_url": "ogp-1200x630.jpg",
+        "og:image:alt": "",
+        "og:image:type": "image/jpeg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:description": "石井総合内科は山形県山形市七日町の総合内科です",
+        "twitter:image": "ogp-1200x630.jpg",
+        "twitter:image:alt": ""
+    },
+    "error": {
+        "prefix": "og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# article: https://ogp.me/ns/article#",
+        "title": "404 File Not Found",
+        "description": "アクセスしようとしたページは見つかりませんでした。",
+        "keywords": "",
+        "og:type": "article",
+        "og:url": "https://shogo-log1.coding11ty.com/error.html",
+        "og:image": "ogp-1200x630.jpg",
+        "og:image:secure_url": "ogp-1200x630.jpg",
+        "og:image:alt": "",
+        "og:image:type": "image/jpeg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:description": "アクセスしようとしたページは見つかりませんでした。",
+        "twitter:image": "ogp-1200x630.jpg",
+        "twitter:image:alt": ""
+    }
+}

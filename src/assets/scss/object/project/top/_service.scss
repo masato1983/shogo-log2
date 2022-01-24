@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Top-service project
+   ========================================================================== */
+
+@use '../../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* overview */
+.p-top-service {
+  padding-top: fs-rem(40px);
+  padding-bottom: fs-rem(52px);
+  background-color: var(--color-primary-light);
+
+  @include mq($from: tablet) {
+    padding-top: fs-rem(78px);
+    padding-bottom: fs-rem(80px);
+  }
+}
+
+/* title layout */
+.p-top-service__title {
+  text-align: center;
+}
+
+/* subtitle layout */
+.p-top-service__subtitle {
+  margin-top: fs-rem(40px);
+  text-align: center;
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(63px);
+  }
+
+  span {
+    display: block;
+
+    @include mq($from: landscape) {
+      display: inline;
+    }
+  }
+}
+
+/* body layout */
+.p-top-service__body {
+  margin-top: fs-rem(25px);
+}

@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Table component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* table overview */
+.c-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* tr layout */
+.c-table__row {
+  display: block;
+  padding: fs-rem(12px) fs-rem(0);
+
+  @include mq($from: tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &:first-of-type {
+    padding-top: fs-rem(0);
+  }
+
+  &:nth-of-type(n+2) {
+    border-top: fs-rem(1px) solid var(--color-neutral-extra-lighter);
+  }
+
+  &:last-of-type {
+    border-bottom: fs-rem(1px) solid var(--color-neutral-extra-lighter);
+  }
+}
+
+/* header style */
+.c-table__header {
+  display: inline;
+  width: fs-rem(80px);
+  margin-right: fs-rem(12px); // To prevent space on the left when the width narrows and the column drops, margin-right is used.
+  vertical-align: baseline;
+
+  @include mq($from: tablet) {
+    flex-shrink: 0;
+    margin-right: fs-rem(36px); // To prevent space on the left when the width narrows and the column drops, margin-right is used.
+  }
+}
+
+/* data-01 style */
+.c-table__data--01 {
+  width: fs-rem(80px);
+  vertical-align: baseline;
+
+  @include mq($from: tablet) {
+    flex-shrink: 0;
+    margin-right: fs-rem(30px); // To prevent space on the left when the width narrows and the column drops, margin-right is used.
+  }
+}
+
+/* data-02 style */
+.c-table__data--02 {
+  display: block;
+  margin-top: fs-rem(8px);
+
+  @include mq($from: tablet) {
+    flex-grow: 1;
+    margin-top: fs-rem(0);
+  }
+}
