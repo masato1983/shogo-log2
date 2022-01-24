@@ -30,7 +30,7 @@ function cacheBusting(cb) {
                         var ext = path.extname(file.path);
                         return path.basename(file.path, ext) + '-' + hash.substr(0, 8) + ext;
                     },
-                    prefix: 'https://shogo-log1.coding11ty.com/',
+                    prefix: 'https://shogo-log2.coding11ty.com/',
                     dontRenameFile: ['.html', 'js'],
                     dontUpdateReference: ['.html', 'js'],
                     includeFilesInManifest: ['.css', '.webp', '.jpg', '.svg', '.png'],
