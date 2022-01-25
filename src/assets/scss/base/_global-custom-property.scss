@@ -7,22 +7,19 @@
 
 :root {
   /* primary color */
-  --color-primary-mid: #21a937;
-  --color-primary-mid-alpha-low: rgba(33, 169, 55, 0.8); // IE11 does not support the alpha-value as percent
-  --color-primary-mid-alpha-high: rgba(33, 169, 55, 0.35); // IE11 does not support the alpha-value as percent
-  --color-primary-mid-alpha-extra-high: rgba(33, 169, 55, 0.05); // IE11 does not support the alpha-value as percent
-  --color-primary-lighter: #99e5a5;
-  --color-primary-light: #f5fcf8;
+  --color-primary-mid: #4b6cb7;
 
   /* secondary color */
-  --color-secondary-mid: #52442f;
+  --color-secondary-mid: #b8614b;
 
   /* neutral color */
   --color-neutral-darken: #000;
-  --color-neutral-darker: #333;
-  --color-neutral-mid: #444;
-  --color-neutral-lighter: #c9c9c9;
-  --color-neutral-extra-lighter: #e7e7e7;
+  --color-neutral-darker: #182848;
+  --color-neutral-darker-alpha-middle: rgba(24, 40, 72, 0.46); // IE11 does not support the alpha-value as percent
+  --color-neutral-mid: #191919;
+  --color-neutral-mid-alpha-middle: rgba(25, 25, 25, 0.46); // IE11 does not support the alpha-value as percent
+  --color-neutral-mid-alpha-high: rgba(25, 25, 25, 0.25); // IE11 does not support the alpha-value as percent
+  --color-neutral-lighter: #f0f0f0;
   --color-neutral-lightest: #fff;
 
   /* other color */
@@ -36,10 +33,10 @@
 
   /* font-family */
   --font-family-primary: 'Noto Sans JP', sans-serif;
-  --font-family-secondary: 'Montserrat', sans-serif;
+  --font-family-secondary: 'Lato', sans-serif;
 
   /* font-size (postcss-rem) */
-  --font-size-2xs: rem(11px);
+  --font-size-2xs: rem(10px);
   --font-size-xs: rem(12px);
   --font-size-sm: rem(14px);
   --font-size-md: rem(16px);
@@ -52,75 +49,21 @@
   --font-size-6xl: rem(30px);
   --font-size-7xl: rem(32px);
   --font-size-8xl: rem(34px);
-  --font-size-9xl: rem(36px);
-  --font-size-10xl: rem(38px);
+  --font-size-9xl: rem(48px);
+  --font-size-10xl: rem(96px);
 
   /* font-weight */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+  --font-weight-black: 900;
 
   /* letter-spacing */
   --letter-spacing-narrow: -0.03em;
   --letter-spacing-normal: 0;
-  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wide: 0.02em;
   --letter-spacing-wider: 0.08em;
   --letter-spacing-widest: 0.2em;
-
-  /* line-height */
-  --line-height-none: 1;
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.75;
-  --line-height-loose: 2;
-  --line-height-extra-loose: 2.375;
-
-  /* line-height one-line(default) Noto Serif JP */
-  --line-height-noto-1: calc(17 / 12);
-  --line-height-noto-2: calc(20 / 14);
-  --line-height-noto-3: calc(24 / 16);
-  --line-height-noto-4: calc(26 / 18);
-  --line-height-noto-5: calc(29 / 20);
-  --line-height-noto-6: calc(32 / 22);
-  --line-height-noto-7: calc(35 / 24);
-  --line-height-noto-8: calc(37 / 26);
-  --line-height-noto-9: calc(40 / 28);
-  --line-height-noto-10: calc(44 / 30);
-  --line-height-noto-11: calc(46 / 32);
-  --line-height-noto-12: calc(49 / 34);
-  --line-height-noto-13: calc(52 / 36);
-  --line-height-noto-14: calc(55 / 38);
-  --line-height-noto-15: calc(58 / 40);
-  --line-height-noto-16: calc(61 / 42);
-
-  /* line-height one-line(default) Lora */
-  --line-height-lora-3: calc(15 / 12);
-  --line-height-lora-4: calc(18 / 14);
-  --line-height-lora-5: calc(20 / 16);
-  --line-height-lora-6: calc(23 / 18);
-  --line-height-lora-7: calc(31 / 24);
-  --line-height-lora-8: calc(33 / 26);
-  --line-height-lora-9: calc(41 / 32);
-  --line-height-lora-10: calc(61 / 48);
-  --line-height-lora-11: calc(92 / 72);
-
-  /* line-height one-line(default) Montserrat */
-  --line-height-montserrat-3: calc(15 / 12);
-  --line-height-montserrat-4: calc(18 / 14);
-  --line-height-montserrat-5: calc(19 / 16);
-  --line-height-montserrat-6: calc(22 / 18);
-  --line-height-montserrat-7: calc(24 / 20);
-  --line-height-montserrat-8: calc(27 / 22);
-  --line-height-montserrat-9: calc(29 / 24);
-  --line-height-montserrat-10: calc(32 / 26);
-  --line-height-montserrat-11: calc(34 / 28);
-  --line-height-montserrat-12: calc(37 / 30);
-  --line-height-montserrat-13: calc(39 / 32);
-  --line-height-montserrat-14: calc(42 / 34);
-  --line-height-montserrat-15: calc(44 / 36);
-  --line-height-montserrat-16: calc(58 / 48);
-  --line-height-montserrat-17: calc(88 / 72);
 
   /* z-index */
   --z-index-base: 0;
