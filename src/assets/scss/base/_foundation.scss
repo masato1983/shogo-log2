@@ -14,7 +14,7 @@ body {
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-sm);
   font-family: var(--font-family-primary);
-  line-height: var(--line-height-noto-2);
+  line-height: var(--line-height-normal);
   letter-spacing: var(--letter-spacing-normal);
   hyphens: auto;
   hanging-punctuation: allow-end;
@@ -27,12 +27,10 @@ body {
 
   @include mq($from: tablet) {
     font-size: calc((var(--font-size-sm) + var(--font-size-md)) / 2);
-    line-height: calc((var(--line-height-noto-2) + var(--line-height-noto-3)) / 2);
   }
 
   @include mq($from: desktop) {
     font-size: var(--font-size-md);
-    line-height: var(--line-height-noto-3);
   }
 }
 
