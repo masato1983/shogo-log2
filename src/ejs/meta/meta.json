@@ -29,7 +29,7 @@
     "top": {
         "prefix": "og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#",
         "title": "Top",
-        "description": "園崎組は埼玉県秩父市にて、主に土木工事にて 社会基盤を支える企業になります。",
+        "description": "私達のモットーは、「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロフェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。",
         "keywords": "",
         "og:type": "website",
         "og:url": "https://shogo-log2.coding11ty.com",
@@ -39,7 +39,7 @@
         "og:image:type": "image/jpeg",
         "og:image:width": "1200",
         "og:image:height": "630",
-        "og:description": "園崎組は埼玉県秩父市にて、主に土木工事にて 社会基盤を支える企業になります。",
+        "og:description": "私達のモットーは、「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロフェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。",
         "twitter:image": "ogp-1200x630.jpg",
         "twitter:image:alt": ""
     },
