@@ -9,41 +9,85 @@
 // Common modifier
 // ==========================================================================
 
-/* primary modifier */
+/* color modifier */
 .c-text--primary {
   color: var(--color-primary-mid);
 }
 
-/* white modifier */
+.c-text--secondary {
+  color: var(--color-primary-secondary);
+}
+
 .c-text--white {
   color: var(--color-neutral-lightest);
 }
 
-/* bold modifier */
+.c-text--link {
+  display: inline;
+  color: var(--color-link);
+}
+
+/* font-family modifier */
+.c-text--english {
+  font-family: var(--font-family-secondary);
+}
+
+/* weight modifier */
+.c-text--medium {
+  font-weight: var(--font-weight-medium);
+}
+
 .c-text--bold {
   font-weight: var(--font-weight-bold);
 }
 
-/* narrow modifier */
-.c-text--narrow {
-  letter-spacing: var(--letter-spacing-narrow);
+.c-text__black {
+  font-weight: var(--font-weight-black);
 }
 
-/* extra-loose modifier */
+/* line-height modifier */
+.c-text--extra-tight {
+  line-height: var(--line-height-tight);
+}
+
+.c-text--extra-snug {
+  line-height: var(--line-height-snug);
+}
+
+.c-text--relaxed {
+  line-height: var(--line-height-relaxed);
+}
+
+.c-text--loose {
+  line-height: var(--line-height-loose);
+}
+
 .c-text--extra-loose {
   line-height: var(--line-height-extra-loose);
+}
+
+/* spacing modifier */
+.c-text--wide {
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.c-text--wider {
+  letter-spacing: var(--letter-spacing-wider);
+}
+
+.c-text--widest {
+  letter-spacing: var(--letter-spacing-widest);
+}
+
+/* shadow modifier */
+.c-text--shadow {
+  text-shadow: fs-rem(4.2px) fsrem(4.2px) fsrem(4px) var(--color-neutral-darker-alpha-middle);
 }
 
 /* underline modifier */
 .c-text--underline {
   display: inline-block;
   background: linear-gradient(transparent 70%, var(--color-primary-lighter) 70%);
-}
-
-/* link modifier */
-.c-text--link {
-  display: inline;
-  color: var(--color-link);
 }
 
 /* hover modifier */
@@ -71,52 +115,50 @@
 }
 
 // ==========================================================================
-// 2xs, xs, sm, md, lg, xl, 2xl size
+// xs, sm, md, lg, xl, 2xl size
 // ==========================================================================
-
-/* 2xs size */
-.c-text__2xs {
-  font-size: var(--font-size-2xs);
-
-  &--center {
-    text-align: center;
-  }
-}
 
 /* xs size */
 .c-text__xs {
-  font-size: var(--font-size-xs);
+  color: var(--color-neutral-lightest);
+  font-size: var(--font-size-2xs);
 
-  &--center {
-    text-align: center;
+  @include mq($from: tablet) {
+    font-size: var(--font-size-xs);
   }
 }
 
 /* sm size */
 .c-text__sm {
-  font-size: var(--font-size-sm);
-
-  &--center {
-    text-align: center;
-  }
+  color: var(--color-neutral-lightest);
+  font-size: var(--font-size-xs);
 }
 
 /* md size */
 .c-text__md {
   &--center {
-    text-align: center;
+    line-height: var(--line-height-loose);
+    letter-spacing: var(--letter-spacing-wide);
   }
+}
+
+/* lg size */
+.c-text__lg {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xl);
 }
 
 /* xl size */
 .c-text__xl {
+  color: var(--color-neutral-darker);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-xl);
 
   @include mq($from: tablet) {
-    font-size: calc((var(--font-size-xl) + var(--font-size-3xl)) / 2);
+    font-size: calc((var(--font-size-xl) + var(--font-size-7xl)) / 2);
   }
 
   @include mq($from: desktop) {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-7xl);
   }
 }
