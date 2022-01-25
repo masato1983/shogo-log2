@@ -5,24 +5,86 @@
 @use '../abstracts/' as *;
 @use 'sass:math' as *;
 
-/* base section */
-.l-section {
-  padding-top: fs-rem(64px);
-  padding-bottom: fs-rem(64px);
+// ==========================================================================
+// Section modifier
+// ==========================================================================
 
-  @include mq($from: tablet) {
-    padding-top: fs-rem(div(64px + 96px, 2));
-    padding-bottom: fs-rem(div(64px + 96px, 2));
-  }
+/* service modifire */
+.l-section--service {
+  margin-top: fs-rem(120px);
+  padding-bottom: fs-rem(48px);
 
   @include mq($from: desktop) {
-    padding-top: fs-rem(96px);
-    padding-bottom: fs-rem(96px);
+    margin-top: fs-rem(160px);
+    padding-top: fs-rem(40px);
+    padding-bottom: fs-rem(0);
   }
 }
 
-/* body element */
-.l-section__body {
+/* about modifire */
+.l-section--about {
+  margin-top: fs-rem(120px);
+
+  @include mq($from: desktop) {
+    margin-top: fs-rem(160px);
+  }
+}
+
+/* works modifire */
+.l-section--works {
+  margin-top: fs-rem(120px);
+  padding-top: fs-rem(32px);
+  padding-bottom: fs-rem(40px);
+
+  @include mq($from: desktop) {
+    margin-top: fs-rem(160px);
+    padding-bottom: fs-rem(0);
+  }
+}
+
+/* recruit modifire */
+.l-section--recruit {
+  margin-top: fs-rem(120px);
+
+  @include mq($from: desktop) {
+    margin-top: fs-rem(160px);
+    padding-top: fs-rem(80px);
+  }
+}
+
+/* contact modifire */
+.l-section--contact {
+  margin-top: fs-rem(120px);
+  padding-top: fs-rem(96px);
+  padding-bottom: fs-rem(96px);
+
+  @include mq($from: desktop) {
+    margin-top: fs-rem(80px);
+    padding-top: fs-rem(80px);
+    padding-bottom: fs-rem(80px);
+  }
+}
+
+/* footer modifire */
+.l-section--footer {
+  padding-top: fs-rem(40px);
+  padding-bottom: fs-rem(40px);
+
+  @include mq($from: desktop) {
+    padding-top: fs-rem(85px);
+    padding-bottom: fs-rem(120px);
+  }
+}
+
+// ==========================================================================
+// Body modifier
+// ==========================================================================
+
+/* service, about, works, contact modifier (for body element) */
+.l-section__body--service,
+.l-section__body--about,
+.l-section__body--works,
+.l-section__body--contact {
   padding-top: fs-rem(32px);
 
   @include mq($from: tablet) {
@@ -31,5 +93,43 @@
 
   @include mq($from: desktop) {
     padding-top: fs-rem(40px);
+  }
+}
+
+/* recruit modifier (for body element) */
+.l-section__body--recruit {
+  padding-top: fs-rem(31px);
+
+  @include mq($from: tablet) {
+    padding-top: fs-rem(div(31px + 56px, 2));
+  }
+
+  @include mq($from: desktop) {
+    padding-top: fs-rem(56px);
+  }
+}
+
+// ==========================================================================
+// For Button modifier
+// ==========================================================================
+
+/* service, about, works, recruit modifier (for button element) */
+.l-section__button--service,
+.l-section__button--about,
+.l-section__button--works,
+.l-section__button--recruit {
+  margin-top: fs-rem(40px);
+}
+
+/* contact modifier (for button element) */
+.l-section__button--contact {
+  margin-top: fs-rem(32px);
+
+  @include mq($from: tablet) {
+    padding-top: fs-rem(div(32px + 56px, 2));
+  }
+
+  @include mq($from: desktop) {
+    margin-top: fs-rem(56px);
   }
 }
