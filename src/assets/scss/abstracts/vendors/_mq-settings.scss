@@ -4,12 +4,16 @@ $breakpoints: (
     tablet:  724px,
     desktop: 1080px,
     wide:    1300px,
-    full:    1920px
+    full:    1920px,
+
+    // Tweakpoints
+    headerMenu: 840px,
 );
 
 $media-type: 'all';
 
 $show-breakpoints: (mobile, landscape, tablet, desktop, wide, full);
+// $show-breakpoints: ();
 
 @forward './mq'  with (
   $breakpoints: $breakpoints,
