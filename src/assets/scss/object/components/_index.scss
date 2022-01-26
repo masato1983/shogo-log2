@@ -2,11 +2,12 @@
 // Components
 // ============================================================================
 
-@use '_badge.scss';
-@use '_card.scss';
-@use '_hamburger.scss';
-@use '_heading.scss';
-@use '_logo.scss';
+@use 'badge';
+@use 'card';
+@use 'gnav';
+@use 'hamburger';
+@use 'heading';
+@use 'logo';
 @use 'table';
 @use 'telephone';
 @use 'text';
