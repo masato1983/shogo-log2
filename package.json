@@ -93,6 +93,7 @@
         "core-js": "3.20.3",
         "cpx2": "4.1.2",
         "cross-env": "7.0.3",
+        "delicious-hamburgers": "^1.2.0",
         "destyle.css": "3.0.2",
         "easings-css": "2.1.1",
         "ejs-cli": "2.2.3",
