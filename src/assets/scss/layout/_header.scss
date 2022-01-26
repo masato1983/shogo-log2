@@ -8,6 +8,7 @@
 /* overall style */
 .l-header {
   background-color: var(--color-primary-mid);
+  background-image: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
 
 /* inner layout */
@@ -25,27 +26,30 @@
   }
 }
 
+/* navigation layout */
 .l-header__navigation {
   flex-grow: 1;
   height: 100%;
 }
 
+/* button layout */
 .l-header__button {
   width: fs-rem(60px);
   height: 100%;
   margin-left: auto;
   background-color: transparent;
 
-  @include mq($from: tablet) {
+  @include mq($from: headerMenu) {
     display: none;
   }
 }
 
+/* menu layout */
 .l-header__menu {
   display: none;
-  margin-left: fs-rem(30px);
 
-  @include mq($from: tablet) {
+  @include mq($from: headerMenu) {
     display: block;
+    margin-left: fs-rem(25px);
   }
 }
