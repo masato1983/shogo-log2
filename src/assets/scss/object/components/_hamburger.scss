@@ -1,0 +1,11 @@
+// ==========================================================================
+// Hamburger component
+// ==========================================================================
+
+@use 'vendors/delicious-hamburgers/scss/base' with (
+  $hamburger-size: 100%,
+  $hamburger-color: var(--color-neutral-lightest),
+  $hamburger-padding: 20px,
+  $hamburger-bar-spacing: 5px,
+  $hamburger-animations: ('chop')
+);
