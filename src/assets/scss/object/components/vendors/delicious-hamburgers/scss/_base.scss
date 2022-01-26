@@ -6,6 +6,7 @@
 @use "sass:list";
 @import "variables";
 
+/* base style */
 .c-hamburger {
     $base-transitions: opacity $hamburger-opacity-transition-speed $hamburger-easing,
         background $hamburger-background-transition-speed $hamburger-easing;
@@ -25,21 +26,24 @@
     text-transform: none;
     transition: list.append($base-transitions, $hamburger-extra-transition-rules);
 
+    // hover style
     &:hover {
         background-color: $hamburger-background-hover;
         opacity: $hamburger-opacity-hover;
     }
 
+    // focus style
     &:focus {
         outline: 0;
     }
 
+    // active style
     &.is-active {
         background-color: $hamburger-background-active;
     }
-
 }
 
+/* inner style */
 .c-hamburger__inner {
     margin: 0;
     margin-top: math.div(-$hamburger-thickness, 2);
@@ -47,6 +51,7 @@
     width: 100%;
 }
 
+/* line style */
 .c-hamburger__line {
     background-color: $hamburger-color;
     border-radius: $hamburger-bar-border-radius;
@@ -64,7 +69,7 @@
         top: $hamburger-bar-spacing;
     }
 
-    // chop style not-active
+    // chop style
     .c-hamburger--chop & {
         transition:
         transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing,
@@ -86,15 +91,17 @@
         }
     }
 
+    // hover line style
     .c-hamburger:hover & {
         background-color: $hamburger-color-hover;
     }
 
+    // active line style
     .c-hamburger.is-active & {
         background-color: $hamburger-color-active;
     }
 
-    // chop style active
+    // active chop line style
     .c-hamburger--chop.is-active & {
         top: 0;
 
