@@ -25,10 +25,18 @@
 
 /* large modifier */
 .l-container--lg {
-  max-width: fs-rem(1920px);
-}
+  padding-right: fs-rem(0);
+  padding-left: fs-rem(20px);
 
-/* xl modifier */
-.l-container--xl {
-  max-width: fs-rem(2560px);
+  @include mq($from: tablet) {
+    width: 100%;
+    max-width: fs-rem(1920px);
+    padding-right: fs-rem(30px);
+    padding-left: fs-rem(30px);
+  }
+
+  @include mq($from: desktop) {
+    padding-right: fs-rem(40px);
+    padding-left: fs-rem(40px);
+  }
 }
