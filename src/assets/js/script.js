@@ -7,6 +7,39 @@ import 'core-js/modules/es.number.is-nan';
 import 'core-js/modules/es.string.repeat';
 import 'core-js/modules/es.promise';
 
+// hamburger menu toggle
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+let hamburgerButton = document.querySelector('.c-hamburger');
+let globalNavigation = document.querySelector('.c-gnav');
+let blankSpace = document.querySelector('.l-header__blank-space');
+
+hamburgerButton.addEventListener('click', function () {
+    if (globalNavigation.classList.contains('is-active')) {
+        this.setAttribute('aria-expanded', 'false');
+        this.setAttribute('aria-label', 'menu');
+        this.classList.remove('is-active');
+        globalNavigation.classList.remove('is-active');
+        blankSpace.classList.remove('is-active');
+        enableBodyScroll(globalNavigation);
+    } else {
+        this.setAttribute('aria-label', 'close menu');
+        this.setAttribute('aria-expanded', 'true');
+        this.classList.add('is-active');
+        globalNavigation.classList.add('is-active');
+        blankSpace.classList.add('is-active');
+        disableBodyScroll(globalNavigation);
+    }
+});
+
+blankSpace.addEventListener('click', function () {
+    hamburgerButton.setAttribute('aria-expanded', 'false');
+    hamburgerButton.setAttribute('aria-label', 'menu');
+    hamburgerButton.classList.remove('is-active');
+    globalNavigation.classList.remove('is-active');
+    this.classList.remove('is-active');
+    enableBodyScroll(globalNavigation);
+});
+
 // switch viewport
 !(function () {
     const viewport = document.querySelector('meta[name="viewport"]');
