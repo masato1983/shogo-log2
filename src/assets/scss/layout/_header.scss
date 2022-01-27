@@ -7,6 +7,7 @@
 
 /* overall style */
 .l-header {
+  z-index: var(--z-index-header);
   background-color: var(--color-primary-mid);
   background-image: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
@@ -26,14 +27,21 @@
   }
 }
 
+/* logo layout */
+.l-header__logo {
+  z-index: var(--z-index-header-logo);
+}
+
 /* navigation layout */
 .l-header__navigation {
+  z-index: var(--z-index-header-navigation);
   flex-grow: 1;
   height: 100%;
 }
 
 /* button layout */
 .l-header__button {
+  z-index: var(--z-index-header-button);
   width: fs-rem(60px);
   height: 100%;
   margin-left: auto;
@@ -46,10 +54,31 @@
 
 /* menu layout */
 .l-header__menu {
+  z-index: var(--z-index-header-menu);
   display: none;
 
   @include mq($from: headerMenu) {
     display: block;
     margin-left: fs-rem(25px);
+  }
+}
+
+/* bland-space layout */
+.l-header__blank-space {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-header-blank-space);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-neutral-mid-alpha-high);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-in-out-cubic), visibility 0.3s var(--ease-in-out-cubic);
+
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
   }
 }
