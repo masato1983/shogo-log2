@@ -28,7 +28,7 @@
   padding-right: fs-rem(0);
   padding-left: fs-rem(20px);
 
-  @include mq($from: tablet) {
+  @include mq($from: headerMenu) {
     width: 100%;
     max-width: fs-rem(1920px);
     padding-right: fs-rem(30px);
