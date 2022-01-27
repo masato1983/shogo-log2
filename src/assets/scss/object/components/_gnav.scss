@@ -5,39 +5,90 @@
 @use '../../abstracts/' as *;
 @use 'sass:math' as *;
 
-/* overview */
-.c-gnav {
-  height: 100%;
-}
+/* mobile menu layout */
+@include mq($until: headerMenu) {
+  /* overview */
+  .c-gnav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    padding-top: fs-rem(80px + 56px);
+    padding-bottom: fs-rem(120px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--color-primary-mid);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-in-out-cubic), visibility 0.3s var(--ease-in-out-cubic);
 
-/* list layout */
-.c-gnav__list {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-/* item layout */
-.c-gnav__item {
-  display: flex;
-  align-items: center;
-
-  &:nth-of-type(n+2) {
-    &::before {
-      display: block;
-      width: fs-rem(1px);
-      height: fs-rem(hypot(22px, 25px));
-      margin-right: fs-rem(18px);
-      margin-left: fs-rem(18px);
-      background-color: var(--color-neutral-lightest);
-      transform: rotate(atan2(22, 25));
-      content: '';
+    &.is-active {
+      visibility: visible;
+      opacity: 1;
     }
+  }
+
+  /* list layout */
+  .c-gnav__list {
+    font-size: var(--font-size-xl);
+    text-align: center;
+  }
+
+  /* item layout */
+  .c-gnav__item {
+    &:nth-of-type(n+2) {
+      margin-top: fs-rem(40px);
+    }
+  }
+
+  /* break layout */
+  .c-gnav__break {
+    display: block;
+    margin-top: fs-rem(4px);
+    font-size: var(--font-size-sm);
   }
 }
 
-/* break layout */
-.c-gnav__break {
-  display: block;
-  text-align: center;
+/* desktop menu layout */
+@include mq($from: headerMenu) {
+  /* overview */
+  .c-gnav {
+    height: 100%;
+    visibility: hidden; // Avoid visibility transitions when the view size changes from 840px to 839px.
+  }
+
+  /* list layout */
+  .c-gnav__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    visibility: visible;
+  }
+
+  /* item layout */
+  .c-gnav__item {
+    display: flex;
+    align-items: center;
+
+    &:nth-of-type(n+2) {
+      &::before {
+        display: block;
+        width: fs-rem(1px);
+        height: fs-rem(hypot(22px, 25px));
+        margin-right: fs-rem(18px);
+        margin-left: fs-rem(18px);
+        background-color: var(--color-neutral-lightest);
+        transform: rotate(atan2(22, 25));
+        content: '';
+      }
+    }
+  }
+
+  /* break layout */
+  .c-gnav__break {
+    display: block;
+    text-align: center;
+  }
 }
