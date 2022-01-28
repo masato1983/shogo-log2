@@ -65,6 +65,15 @@
   --letter-spacing-wider: 0.08em;
   --letter-spacing-widest: 0.2em;
 
+  /* line-height */
+  --line-height-none: 1;
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  --line-height-extra-loose: 2.375;
+
   /* z-index */
   --z-index-base: 0;
   --z-index-above: 10;
