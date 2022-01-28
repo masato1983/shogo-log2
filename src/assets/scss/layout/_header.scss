@@ -8,7 +8,9 @@
 /* overall style */
 .l-header {
   z-index: var(--z-index-header);
-  background-image: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
+  width: 100vw; // Workaround body-scroll-lock bug
+  margin-bottom: fs-rem(-2px); // Workaround the problem of gaps between header elements.
+  background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
 
 /* inner layout */
@@ -54,7 +56,7 @@
 /* menu layout */
 .l-header__menu {
   z-index: var(--z-index-header-menu);
-  display: none;
+  // display: none;
 
   @include mq($from: headerMenu) {
     display: block;
