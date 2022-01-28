@@ -4,6 +4,7 @@
 
 @use "sass:math";
 @use "sass:list";
+@use "../../../../../abstracts/" as *;
 @import "variables";
 
 /* base style */
@@ -34,7 +35,7 @@
 
     // focus style
     &:focus {
-        outline: 0;
+        @include focus-hamburger;
     }
 
     // active style
