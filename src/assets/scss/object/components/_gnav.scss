@@ -24,7 +24,7 @@
     opacity: 0;
     transition: opacity 0.3s var(--ease-in-out-cubic), visibility 0.3s var(--ease-in-out-cubic);
 
-    &.is-active {
+    &.is-open {
       visibility: visible;
       opacity: 1;
     }

@@ -38,8 +38,8 @@
         @include focus-hamburger;
     }
 
-    // active style
-    &.is-active {
+    // open style
+    &.is-open {
         background-color: $hamburger-background-active;
     }
 }
@@ -97,13 +97,13 @@
         background-color: $hamburger-color-hover;
     }
 
-    // active line style
-    .c-hamburger.is-active & {
+    // open line style
+    .c-hamburger.is-open & {
         background-color: $hamburger-color-active;
     }
 
-    // active chop line style
-    .c-hamburger--chop.is-active & {
+    // open chop line style
+    .c-hamburger--chop.is-open & {
         top: 0;
 
         &:nth-child(1) {
