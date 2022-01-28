@@ -7,12 +7,22 @@
 
 /* key-visual overview */
 .p-top-kv {
-  background-image: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
+  background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
 
 /* inner layout */
 .p-top-kv__inner {
   position: relative;
+}
+
+/* swiper layout */
+.p-top-kv__swiper {
+  z-index: var(--z-index-base);
+}
+
+/* swiper-wrapper layout */
+.p-top-kv__swiper-wrapper {
+  z-index: var(--z-index-base);
 }
 
 /* media layout */
