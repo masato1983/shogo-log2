@@ -1,0 +1,127 @@
+/* ==========================================================================
+   News component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* overview */
+.c-news {
+  display: flex;
+  flex-direction: column;
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-neutral-darker);
+    border: fs-rem(2px) solid var(--color-neutral-darker);
+  }
+}
+
+/* header layout */
+.c-news__header {
+  display: flex;
+  padding-left: fs-rem(12px);
+  background-color: var(--color-neutral-darker);
+  clip-path: polygon(0 0, 17% 0%, 20% 100%, 0% 100%);
+
+  @include mq($from: tablet) {
+    display: block;
+    width: fs-rem(80px);
+    padding-left: fs-rem(16px);
+    clip-path: none;
+  }
+
+  @include mq($from: desktop) {
+    width: fs-rem(146px);
+    padding-left: fs-rem(22px);
+  }
+}
+
+/* body layout */
+.c-news__body {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: fs-rem(8px) fs-rem(8px);
+  background-color: var(--color-neutral-lightest);
+  border: fs-rem(2px) solid var(--color-neutral-darker);
+
+  @include mq($from: tablet) {
+    padding: fs-rem(8px) fs-rem(18px);
+    border: 0;
+    transform: skewX(-40deg);
+  }
+
+  @include mq($from: desktop) {
+    padding: fs-rem(12px) fs-rem(26px);
+  }
+
+  @include mq($from: wide) {
+    padding: fs-rem(16px) fs-rem(52px);
+  }
+
+  > * {
+    @include mq($from: tablet) {
+      transform: skewX(40deg);
+    }
+  }
+}
+
+/* tag & title layout */
+.c-news__tag,
+.c-news__title {
+  margin-left: fs-rem(6px);
+
+  @include mq($from: tablet) {
+    margin-left: fs-rem(12px);
+  }
+
+  @include mq($from: desktop) {
+    margin-left: fs-rem(24px);
+  }
+}
+
+/* footer layout */
+.c-news__footer {
+  display: none;
+
+  @include mq($from: tablet) {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: fs-rem(60px);
+
+    @include mq($from: desktop) {
+      width: fs-rem(90px);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: fs-rem(16px);
+      bottom: 0;
+      margin: auto;
+      content: '';
+
+      @include mq($from: desktop) {
+        right: fs-rem(32px);
+      }
+    }
+
+    &::before {
+      width: fs-rem(16px);
+      height: fs-rem(1px);
+      background-color: var(--color-neutral-lightest);
+    }
+
+    &::after {
+      width: fs-rem(10px);
+      height: fs-rem(10px);
+      border-top: fs-rem(1px) solid var(--color-neutral-lightest);
+      transform: rotate(45deg);
+    }
+  }
+}
