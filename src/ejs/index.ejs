@@ -7,28 +7,48 @@
         <main class="l-main">
             <!-- top-kv -->
             <div class="p-top-kv">
-                <div class="l-container">
+                <div class="l-container l-container--xl">
                     <div class="p-top-kv__inner">
                         <div class="p-top-kv__media">
                             <picture>
-                                <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-kv-640x316.webp 640w, <%= path['img:top'] %>top-kv-1280x632.webp 1280w, <%= path['img:top'] %>top-kv-1920x947.webp 1920w, <%= path['img:top'] %>top-kv-3840x1894.webp 3840w" />
+                                <source media="(min-width: <%= breakpoints['tablet'] %>)" type="image/webp" sizes="(min-width: 2040px) 1920px, (min-width: 740px) calc(92.19vw + 58px), 376px" srcset="<%= path['img:top'] %>top-kv-01-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-01-2732x1376.webp 2732w" />
+                                <source type="image/webp" sizes="(min-width: 2040px) 1920px, (min-width: 740px) calc(92.19vw + 58px), 376px" srcset="<%= path['img:top'] %>top-kv-01-375x611.webp 375w, <%= path['img:top'] %>top-kv-01-750x1222.webp 750w" />
+                                <source media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 2040px) 1920px, (min-width: 740px) calc(92.19vw + 58px), 376px" srcset="<%= path['img:top'] %>top-kv-01-1366x688.png 1366w, <%= path['img:top'] %>top-kv-01-2732x1376.png 2732w" />
                                 <img
                                     class="p-top-kv__image"
-                                    width="1280"
-                                    height="632"
-                                    src="<%= path['img:top'] %>top-kv-1280x632.jpg"
-                                    sizes="100vw"
-                                    srcset="<%= path['img:top'] %>top-kv-640x316.jpg 640w, <%= path['img:top'] %>top-kv-1280x632.jpg 1280w, <%= path['img:top'] %>top-kv-1920x947.jpg 1920w, <%= path['img:top'] %>top-kv-3840x1894.jpg 3840w"
-                                    alt="石井総合内科クリニックの先生の写真"
+                                    width="750"
+                                    height="1222"
+                                    src="<%= path['img:top'] %>top-kv-01-750x1222.png"
+                                    sizes="(min-width: 2040px) 1920px, (min-width: 740px) calc(92.19vw + 58px), 376px"
+                                    srcset="<%= path['img:top'] %>top-kv-01-375x611.png 375w, <%= path['img:top'] %>top-kv-01-750x1222.png 750w"
+                                    alt=""
                                     decoding="async"
                                     loading="eager"
                                 />
                             </picture>
                         </div>
                         <div class="p-top-kv__body">
-                            <p class="p-top-kv__copy c-heading__level1 c-text--bold c-text--vertical">石井クリニックはこれからも</p>
-                            <p class="p-top-kv__copy c-heading__level1 c-text--bold c-text--vertical">山形の皆様の<span class="c-text--primary">かかりつけ医</span>です</p>
+                            <p class="c-heading__level1 c-text--black c-text--wide c-text--uppercase c-text--shadow"><span class="p-top-kv__break">challenge</span><span class="p-top-kv__break p-top-kv__break--pc">from&nbsp;</span><span class="p-top-kv__break p-top-kv__break--pc">the bottom</span></p>
+                            <div class="p-top-kv__copy">
+                                <div class="p-top-kv__textbox">
+                                    <p class="p-top-kv__text c-text__xl c-text--bold">社会の基礎を支え</p>
+                                </div>
+                                <div class="p-top-kv__textbox">
+                                    <p class="p-top-kv__text c-text__xl c-text--bold">基礎から世界を変革する会社</p>
+                                </div>
+                            </div>
                         </div>
+                        <section class="p-top-kv__news c-news">
+                            <div class="c-news__header">
+                                <p class="c-news__tab c-text--white c-text--english c-text--uppercase">news</p>
+                            </div>
+                            <div class="c-news__body">
+                                <time class="c-news__date" datetime="2021-06-12">2021.06.12</time>
+                                <span class="c-news__tag c-tag c-text__sm c-text--white">お知らせ</span>
+                                <p class="c-news__title">新サイトを公開しました。</p>
+                            </div>
+                            <div class="c-news__footer"></div>
+                        </section>
                     </div>
                 </div>
             </div>
