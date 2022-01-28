@@ -27,7 +27,7 @@ hamburgerButton.addEventListener('click', function () {
         this.classList.add('is-active');
         globalNavigation.classList.add('is-active');
         blankSpace.classList.add('is-active');
-        disableBodyScroll(globalNavigation);
+        disableBodyScroll(globalNavigation, { reserveScrollBarGap: true });
     }
 });
 
@@ -95,29 +95,17 @@ window.addEventListener('resize', setViewportProperty(document.documentElement))
 // swiper
 import Swiper from 'swiper/bundle';
 
-let swiperThumbs = new Swiper('.p-top-works-thumbs__swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 8,
-    grabCursor: true,
-});
-
-new Swiper('.p-top-works__swiper', {
-    spaceBetween: 8,
-    breakpointsBase: 'container',
-    breakpoints: {
-        760: {
-            spaceBetween: 16,
-        },
+new Swiper('.p-top-kv__swiper', {
+    loop: true,
+    speed: 1200,
+    effect: 'fade',
+    fadeEffect: {
+        crossFae: true,
     },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    keyboard: {
-        enabled: true,
-    },
-    thumbs: {
-        swiper: swiperThumbs,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
 });
 
