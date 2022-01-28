@@ -14,3 +14,14 @@
     outline: none;
   }
 }
+
+@mixin focus-hamburger {
+  &:focus {
+    outline: fs-rem(3px) solid var(--color-focus-alpha);
+    outline-offset: fs-rem(-12px);
+  }
+
+  .js-focus-visible &:focus:not(.focus-visible) {
+    outline: none;
+  }
+}
