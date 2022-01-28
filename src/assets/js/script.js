@@ -44,7 +44,7 @@ blankSpace.addEventListener('click', function () {
 !(function () {
     const viewport = document.querySelector('meta[name="viewport"]');
     function switchViewport() {
-        const value = window.outerWidth > 300 ? 'width=device-width,initial-scale=1' : 'width=300';
+        const value = window.outerWidth > 366 ? 'width=device-width,initial-scale=1' : 'width=366';
         if (viewport.getAttribute('content') !== value) {
             viewport.setAttribute('content', value);
         }
