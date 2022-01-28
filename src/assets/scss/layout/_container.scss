@@ -40,3 +40,8 @@
     padding-left: fs-rem(40px);
   }
 }
+
+/* xl modifier */
+.l-container--xl {
+  max-width: fs-rem(1920px);
+}
