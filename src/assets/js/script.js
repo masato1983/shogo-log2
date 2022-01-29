@@ -9,9 +9,26 @@ import 'core-js/modules/es.promise';
 
 // hamburger menu toggle
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-let hamburgerButton = document.querySelector('.c-hamburger');
-let globalNavigation = document.querySelector('.c-gnav');
-let blankSpace = document.querySelector('.l-header__blank-space');
+import * as focusTrap from 'focus-trap';
+const hamburgerButton = document.querySelector('.c-hamburger');
+const globalNavigation = document.querySelector('.c-gnav');
+const blankSpace = document.querySelector('.l-header__blank-space');
+const focusTrapOutsideClick = focusTrap.createFocusTrap('.c-gnav', {
+    allowOutsideClick: true,
+    checkCanFocusTrap: (trapContainers) => {
+        const results = trapContainers.map((trapContainer) => {
+            return new Promise((resolve) => {
+                const interval = setInterval(() => {
+                    if (getComputedStyle(trapContainer).visibility !== 'hidden') {
+                        resolve();
+                        clearInterval(interval);
+                    }
+                }, 5);
+            });
+        });
+        return Promise.all(results);
+    },
+});
 
 hamburgerButton.addEventListener('click', function () {
     if (globalNavigation.classList.contains('is-active')) {
@@ -19,6 +36,7 @@ hamburgerButton.addEventListener('click', function () {
         this.setAttribute('aria-label', 'menu');
         this.classList.remove('is-active');
         globalNavigation.classList.remove('is-active');
+        focusTrapOutsideClick.deactivate();
         blankSpace.classList.remove('is-active');
         enableBodyScroll(globalNavigation);
     } else {
@@ -26,8 +44,9 @@ hamburgerButton.addEventListener('click', function () {
         this.setAttribute('aria-expanded', 'true');
         this.classList.add('is-active');
         globalNavigation.classList.add('is-active');
+        focusTrapOutsideClick.activate();
         blankSpace.classList.add('is-active');
-        disableBodyScroll(globalNavigation, { reserveScrollBarGap: true });
+        disableBodyScroll(globalNavigation);
     }
 });
 
@@ -37,6 +56,7 @@ blankSpace.addEventListener('click', function () {
     hamburgerButton.classList.remove('is-active');
     globalNavigation.classList.remove('is-active');
     this.classList.remove('is-active');
+    focusTrapOutsideClick.deactivate();
     enableBodyScroll(globalNavigation);
 });
 
