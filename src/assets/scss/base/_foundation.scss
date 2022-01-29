@@ -6,7 +6,14 @@
 @use 'sass:math' as *;
 
 html {
-  background-color: var(--color-neutral-lightest);
+  background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker)); // Workaround the problem of gaps between header elements.
+}
+
+body,
+header,
+main,
+footer {
+  width: 100vw; // Workaround the problem of horizontal stretching
 }
 
 body {
