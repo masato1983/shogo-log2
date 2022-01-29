@@ -9,7 +9,7 @@
 .l-header {
   z-index: var(--z-index-header);
   width: 100vw; // Workaround body-scroll-lock bug
-  margin-bottom: fs-rem(-2px); // Workaround the problem of gaps between header elements.
+  margin-bottom: fs-rem(-1px); // Workaround the problem of gaps between header elements.
   background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
 
