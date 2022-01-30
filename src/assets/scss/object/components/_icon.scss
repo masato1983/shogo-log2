@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Icon component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* arrow style */
+.c-icon__arrow {
+  display: inline-block;
+  width: fs-rem(19.5px);
+  height: fs-rem(7.5px);
+  vertical-align: middle;
+  fill: var(--color-neutral-lightest);
+}
