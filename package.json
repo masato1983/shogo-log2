@@ -100,7 +100,7 @@
         "eslint": "8.8.0",
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-prettier": "4.0.0",
-        "focus-trap": "^6.7.2",
+        "focus-trap": "6.7.2",
         "focus-visible": "5.2.0",
         "formbouncerjs": "1.4.6",
         "frontline-sass": "3.11.0",
