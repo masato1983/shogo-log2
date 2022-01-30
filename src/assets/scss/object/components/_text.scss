@@ -50,7 +50,7 @@
   line-height: var(--line-height-tight);
 }
 
-.c-text--extra-snug {
+.c-text--snug {
   line-height: var(--line-height-snug);
 }
 
@@ -151,6 +151,14 @@
 .c-text__lg {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-xl);
+
+  @include mq($from: tablet) {
+    font-size: calc((var(--font-size-xl) + var(--font-size-3xl)) / 2);
+  }
+
+  @include mq($from: desktop) {
+    font-size: var(--font-size-3xl);
+  }
 }
 
 /* xl size */

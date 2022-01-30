@@ -11,11 +11,6 @@
   font-family: var(--font-family-secondary);
 }
 
-.c-heading__level2,
-.c-heading__level3 {
-  font-weight: var(--font-weight-medium);
-}
-
 /* h1 */
 .c-heading__level1 {
   @include fs-scale(font-size, (375px: 48px, 1366px: 96px));
@@ -28,6 +23,7 @@
 
 /* h2 */
 .c-heading__level2 {
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-7xl);
 
   @include mq($from: tablet) {
@@ -41,6 +37,7 @@
 
 /* h3 */
 .c-heading__level3 {
+  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-3xl);
 
   @include mq($from: tablet) {

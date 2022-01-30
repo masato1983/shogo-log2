@@ -65,13 +65,33 @@
 /* break layout for pc */
 .p-top-kv__break--pc {
   @include mq($from: desktop) {
-    display: inline;
+    display: inline-block;
+  }
+}
+
+/* space-01 */
+.p-top-kv__space-01 {
+  @include mq($from: tablet) {
+    padding-right: fs-rem(32px);
+  }
+}
+
+/* space-02 */
+.p-top-kv__space-02 {
+  padding-right: fs-rem(14px);
+
+  @include mq($from: tablet) {
+    padding-right: fs-rem(32px);
   }
 }
 
 /* copy layout */
 .p-top-kv__copy {
   margin-top: fs-rem(24px);
+
+  @include mq($from: wide) {
+    margin-top: fs-rem(18px);
+  }
 }
 
 /* textbox layout */
@@ -88,6 +108,10 @@
     margin-left: fs-rem(32px);
     padding: fs-rem(12px) fs-rem(24px);
     transform: skewX(-40deg);
+  }
+
+  @include mq($from: wide) {
+    padding: fs-rem(8px) fs-rem(24px);
   }
 
   &:nth-of-type(2) {
