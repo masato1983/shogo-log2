@@ -44,6 +44,7 @@ body {
 main {
   flex-grow: 1; // Keep the footer at the bottom
   overflow-x: hidden; // Workaround the appearance of horizontal scroll bar in ie11
+  background-color: var(--color-neutral-lightest);
 }
 
 a,
