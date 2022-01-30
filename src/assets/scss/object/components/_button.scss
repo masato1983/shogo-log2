@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Button component
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+@use 'sass:math' as *;
+
+/* base style */
+.c-button {
+  display: inline-flex; // https://css-tricks.com/when-do-you-use-inline-block/#dont-forget-inline-flex-and-inline-grid, https://css-tricks.com/fixing-a-bug-in-low-resolution-mode/
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+
+  // active style
+  &:active {
+    transform: translateY(fs-rem(1px));
+  }
+
+  // diabled style
+  &[disabled] {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}
+
+/* medium modifier */
+.c-button--medium {
+  width: 100%;
+  max-width: fs-rem(256px);
+  padding-top: fs-rem(11px);
+  padding-bottom: fs-rem(11px);
+
+  @include mq($from: tablet) {
+    padding-top: fs-rem(20px);
+    padding-bottom: fs-rem(20px);
+  }
+}
+
+/* primary modifier */
+.c-button--primary { // https://whocanuse.com/, https://webaim.org/resources/contrastchecker/
+  background-color: var(--color-primary-mid);
+  transition: background-color 0.3s var(--ease-in-out-cubic);
+
+  // hover style
+  @include hover { // https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/, https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/, https://css-tricks.com/touch-devices-not-judged-size/, https://www.npmjs.com/package/hover-media-query
+    background-color: var(--color-primary-mid-alpha);
+  }
+}
+
+/* shadow modifier */
+.c-button--shadow {
+  box-shadow: fs-rem(0) fs-rem(2px) fs-rem(4px) var(--color-neutral-darker-alpha-middle);
+}
+
+/* icon layout */
+.c-button__icon {
+  margin-left: fs-rem(15px);
+}
