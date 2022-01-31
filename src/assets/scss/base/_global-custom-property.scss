@@ -85,6 +85,7 @@
   --z-index-header-button: var(--z-index-base); // z-index: 0
   --z-index-header-menu: calc(var(--z-index-base) + var(--z-index-below)); // z-index: -10
   --z-index-header-blank-space: calc(var(--z-index-header-menu) + var(--z-index-below)); // z-index: -20
+  --z-index-card-number: calc(var(--z-index-base) + var(--z-index-above)); // z-index: 10
 
   /* easing timing function (https://www.npmjs.com/package/easings-css) */
   --ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);

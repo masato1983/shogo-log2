@@ -36,8 +36,9 @@
   padding-top: fs-rem(32px);
   padding-bottom: fs-rem(40px);
 
-  @include mq($from: desktop) {
-    margin-top: fs-rem(160px);
+  @include mq($from: tablet) {
+    margin-top: fs-rem(162px);
+    padding-top: fs-rem(0);
     padding-bottom: fs-rem(0);
   }
 }

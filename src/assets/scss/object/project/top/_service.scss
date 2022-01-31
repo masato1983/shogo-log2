@@ -101,28 +101,10 @@
   }
 }
 
-/* break layout */
-.p-top-service__break {
-  display: block;
-}
-
-/* break layout for pc */
-.p-top-service__break--pc {
-  @include mq($from: desktop) {
-    display: block;
-  }
-}
-
 /* copy layout */
 .p-top-service__copy {
   @include mq($from: desktop) {
     line-height: var(--line-height-snug);
-  }
-
-  .p-top-service__break {
-    @include mq($from: tablet, $until: desktop) {
-      display: inline;
-    }
   }
 }
 

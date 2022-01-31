@@ -33,7 +33,7 @@
 
 /* body layout */
 .p-top-about__body {
-  margin-top: fs-rem(29px);
+  margin-top: fs-rem(48px);
 
   @include mq($from: desktop) {
     position: absolute;
@@ -76,24 +76,6 @@
       height: fs-rem(30px);
       margin-right: fs-rem(18px);
     }
-  }
-}
-
-/* break layout */
-.p-top-about__break {
-  display: inline;
-
-  @include mq($from: desktop) {
-    display: block;
-  }
-}
-
-/* break layout for sp */
-.p-top-about__break--sp {
-  display: inline;
-
-  @include mq($from: desktop) {
-    display: none;
   }
 }
 

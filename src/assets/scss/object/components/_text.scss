@@ -15,7 +15,7 @@
 }
 
 .c-text--secondary {
-  color: var(--color-primary-secondary);
+  color: var(--color-secondary-mid);
 }
 
 .c-text--white {
@@ -141,10 +141,8 @@
 
 /* md size */
 .c-text__md {
-  &--center {
-    line-height: var(--line-height-loose);
-    letter-spacing: var(--letter-spacing-wide);
-  }
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 /* lg size */

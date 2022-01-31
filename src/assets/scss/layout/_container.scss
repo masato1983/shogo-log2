@@ -10,6 +10,19 @@
   margin: 0 auto;
 }
 
+/* small modifier */
+.l-container--sm {
+  width: calc(335px / 375px * 100%); // 89.3%
+
+  @include mq($from: landscape) {
+    max-width: fs-rem(560px);
+  }
+
+  @include mq($from: tablet) {
+    max-width: fs-rem(984px);
+  }
+}
+
 /* medium modifier */
 .l-container--md {
   width: calc(335px / 375px * 100%); // 89.3%
