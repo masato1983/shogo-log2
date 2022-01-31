@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Visible utility
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+
+/* mobile & landscape */
+.u-visible-sp {
+  @include mq($from: tablet) {
+    display: none;
+  }
+}
+
+/* tablet */
+.u-visible-tablet {
+  display: none;
+
+  @include mq($from: tablet) {
+    display: inline;
+  }
+}
+
+/* desktop */
+.u-visible-desktop {
+  display: none;
+
+  @include mq($from: tablet) {
+    display: inline;
+  }
+}
+
+/* wide */
+.u-visible-wide {
+  display: none;
+
+  @include mq($from: wide) {
+    display: inline;
+  }
+}
