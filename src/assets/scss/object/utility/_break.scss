@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Break utility
+   ========================================================================== */
+
+@use '../../abstracts/' as *;
+
+/* all */
+.u-break-all {
+  display: block;
+}
+
+/* sp-only */
+.u-break-sp-only {
+  display: block;
+
+  @include mq($from: tablet) {
+    display: inline;
+  }
+}
+
+/* over tablet */
+.u-break-tablet {
+  @include mq($from: tablet) {
+    display: block;
+  }
+}
+
+/* over desktop */
+.u-break-desktop {
+  @include mq($from: desktop) {
+    display: block;
+  }
+}
+
+/* over wide */
+.u-break-wide {
+  @include mq($from: wide) {
+    display: block;
+  }
+}
