@@ -86,8 +86,8 @@
                                 <span class="p-top-service__subtitle c-text__lg c-text--primary">事業内容</span>
                             </div>
                             <div class="l-section__body--service p-top-service__textbox">
-                                <h3 class="p-top-service__copy c-heading__level3"><span class="p-top-service__break">人々の生活基盤を</span><span class="p-top-service__break">世界最高峰の技術で支える</span></h3>
-                                <p class="p-top-service__text c-text__md"><span class="p-top-service__break--pc c-text--loose c-text--wide">私達のモットーは、「社会基盤から世界をより良くする」こと。</span><span class="p-top-service__break--pc c-text--loose c-text--wide">そのために最前線で国家規模のプロフェクトに参画することもあれば、</span><span class="p-top-service__break--pc c-text--loose c-text--wide">世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も</span><span class="p-top-service__break--pc c-text--loose c-text--wide">同時に行うことで、業界の進化の促進を担っています。</span></p>
+                                <h3 class="p-top-service__copy c-heading__level3"><span class="u-break-sp-only u-break-desktop">人々の生活基盤を</span><span class="u-break-sp-only u-break-desktop">世界最高峰の技術で支える</span></h3>
+                                <p class="p-top-service__text c-text__md"><span class="u-break-desktop">私達のモットーは、「社会基盤から世界をより良くする」こと。</span><span class="u-break-desktop">そのために最前線で国家規模のプロフェクトに参画することもあれば、</span><span class="u-break-desktop">世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も</span><span class="u-break-desktop">同時に行うことで、業界の進化の促進を担っています。</span></p>
                             </div>
                             <div class="l-section__button--service p-top-service__button">
                                 <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
@@ -104,7 +104,7 @@
             <!-- end service section -->
 
             <!-- about section -->
-            <div class="p-top-about l-section--about">
+            <section class="p-top-about l-section--about">
                 <div class="l-container l-container--md">
                     <div class="p-top-about__inner">
                         <div class="p-top-about__media">
@@ -121,7 +121,7 @@
                                 <span class="p-top-about__subtitle c-text__lg c-text--primary">園崎組について</span>
                             </div>
                             <div class="l-section__body--about p-top-about__textbox">
-                                <p class="p-top-about__text c-text__md c-text--loose c-text--wide"><span class="p-top-about__break">園崎組は埼玉県秩父市にて、主に土木工事にて</span><span class="p-top-about__break">社会基盤を支える企業になります。</span><br class="p-top-about__break--sp" /><span class="p-top-about__break">また、自社工場において施工に必要とされる</span><span class="p-top-about__break">各種資材も生産しており、各業者に提供することで、</span><span class="p-top-about__break">社会基盤の構築・整備に貢献しております。</span></p>
+                                <p class="p-top-about__text c-text__md"><span class="u-break-desktop">園崎組は埼玉県秩父市にて、主に土木工事にて</span><span class="u-break-desktop">社会基盤を支える企業になります。</span><br class="u-visible-sp" /><span class="u-break-desktop">また、自社工場において施工に必要とされる</span><span class="u-break-desktop">各種資材も生産しており、各業者に提供することで、</span><span class="u-break-desktop">社会基盤の構築・整備に貢献しております。</span></p>
                             </div>
                             <div class="l-section__button--about p-top-about__button">
                                 <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
@@ -140,8 +140,67 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- end about section -->
+
+            <!-- works section -->
+            <section class="p-top-works l-section--works">
+                <div class="l-container l-container--sm">
+                    <div class="p-top-works__inner">
+                        <div class="p-top-works__header">
+                            <h2 class="p-top-works__title c-heading__level2 c-text--uppercase">works</h2>
+                            <span class="p-top-works__subtitle c-text__lg c-text--primary">園崎組の実績</span>
+                        </div>
+                        <div class="l-section__body--works p-top-works__textbox">
+                            <p class="p-top-works__copy c-heading__level3"><span class="u-break-sp-only">社会を基礎から、</span><span class="u-break-sp-only">変革してきたプロジェクト</span></p>
+                            <p class="p-top-works__text c-text__md"><span class="u-break-tablet">創業以來より培われた確かな技術力で社会を変革する様々な案件を手掛けてきました。</span><span class="u-break-tablet">その一部を紹介させていただきます。</span></p>
+                        </div>
+                        <div class="p-top-works__body">
+                            <ul class="p-top-works__list">
+                                <li class="p-top-works__item">
+                                    <a href="#" class="c-card">
+                                        <div class="c-card__media">
+                                            <span class="c-card__number c-text__lg c-text--white">01</span>
+                                            <picture>
+                                                <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-01-472x240.webp 472w, <%= path['img:top'] %>top-works-01-944x480.webp 944w, <%= path['img:top'] %>top-works-01-1416x720.webp 1416w" />
+                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-01-944x480.png" alt="" sizes="40vw" srcset="<%= path['img:top'] %>top-works-01-472x240.png 472w, <%= path['img:top'] %>top-works-01-944x480.png 944w, <%= path['img:top'] %>top-works-01-1416x720.png 1416w" decoding="async" loading="lazy" />
+                                            </picture>
+                                        </div>
+                                        <div class="c-card__body">
+                                            <h3 class="c-card__title c-text__lg c-text--secondary">施工実績</h3>
+                                            <p class="c-card__description c-text__md">東南アジア某国での国家規模のプロジェクトに参画した際の園崎組のプロジェクトストーリーを記載しています。</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="p-top-works__item">
+                                    <a href="#" class="c-card">
+                                        <div class="c-card__media">
+                                            <span class="c-card__number c-text__lg c-text--white">02</span>
+                                            <picture>
+                                                <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-02-472x240.webp 472w, <%= path['img:top'] %>top-works-02-944x480.webp 944w, <%= path['img:top'] %>top-works-02-1416x720.webp 1416w" />
+                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-02-944x480.png" alt="" sizes="40vw" srcset="<%= path['img:top'] %>top-works-02-472x240.png 472w, <%= path['img:top'] %>top-works-02-944x480.png 944w, <%= path['img:top'] %>top-works-02-1416x720.png 1416w" decoding="async" loading="lazy" />
+                                            </picture>
+                                        </div>
+                                        <div class="c-card__body">
+                                            <h3 class="c-card__title c-text__lg c-text--secondary">商品納入実績</h3>
+                                            <p class="c-card__description c-text__md">土木・建設資材のプロフェッショナルとして、現場で必要となる各種資材を提供しています。</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="l-section__button--works p-top-works__button">
+                                <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                    <span>実績一覧を見る</span>
+                                    <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end works section -->
         </main>
 
         <%- include('./_include/_footer') %>
