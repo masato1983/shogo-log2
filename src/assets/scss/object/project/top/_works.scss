@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Top-works project
+   ========================================================================== */
+
+@use '../../../abstracts/' as *;
+@use 'sass:math' as *;
+
+.p-top-works {
+  background: linear-gradient(115deg, var(--color-neutral-lighter) 0% 12%, var(--color-neutral-lightest) 12% 88%, var(--color-neutral-lighter) 88% 100%);
+
+  @include mq($from: tablet) {
+    background: linear-gradient(45deg, var(--color-neutral-lighter) 0% 10%, var(--color-neutral-lightest) 10% 90%, var(--color-neutral-lighter) 90% 100%);
+  }
+}
+
+.p-top-works__header {
+  display: flex;
+  align-items: flex-end;
+
+  @include mq($from: tablet) {
+    justify-content: center;
+  }
+}
+
+.p-top-works__title {
+  margin-top: fs-rem(-13px);
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(-20px);
+  }
+}
+
+.p-top-works__subtitle {
+  display: flex;
+  align-items: center;
+  margin-left: fs-rem(16px);
+  padding-bottom: fs-rem(6px);
+
+  @include mq($from: desktop) {
+    padding-bottom: fs-rem(10px);
+  }
+
+  &::before {
+    display: block;
+    width: fs-rem(2px);
+    height: fs-rem(22px);
+    margin-right: fs-rem(14px);
+    background-color: var(--color-primary-mid);
+    transform: rotate(40deg);
+    content: '';
+
+    @include mq($from: desktop) {
+      height: fs-rem(30px);
+      margin-right: fs-rem(18px);
+    }
+  }
+}
+
+.p-top-works__copy,
+.p-top-works__text {
+  text-align: left;
+
+  @include mq($from: tablet) {
+    text-align: center;
+  }
+}
+
+.p-top-works__copy {
+  @include mq($from: tablet) {
+    margin-top: fs-rem(-2px);
+  }
+}
+
+.p-top-works__text {
+  margin-top: fs-rem(16px);
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(24px);
+  }
+}
+
+.p-top-works__list {
+  margin-top: fs-rem(36px);
+
+  @include mq($from: tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: fs-rem(48px);
+    margin-left: fs-rem(-40px);
+  }
+}
+
+.p-top-works__item {
+  @include mq($from: tablet) {
+    width: div(100%, 2);
+    padding-left: fs-rem(40px);
+  }
+
+  &:nth-of-type(n+2) {
+    margin-top: fs-rem(34px);
+
+    @include mq($from: tablet) {
+      margin-top: fs-rem(0);
+    }
+  }
+}
+
+.p-top-works__button {
+  text-align: center;
+}
