@@ -90,7 +90,7 @@
         "browser-sync": "2.27.7",
         "chokidar-cli": "3.0.0",
         "clean-css-cli": "5.5.2",
-        "core-js": "3.20.3",
+        "core-js": "3.21.0",
         "cpx2": "4.1.2",
         "cross-env": "7.0.3",
         "delicious-hamburgers": "1.2.0",
