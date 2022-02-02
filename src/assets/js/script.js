@@ -7,6 +7,40 @@ import 'core-js/modules/es.number.is-nan';
 import 'core-js/modules/es.string.repeat';
 import 'core-js/modules/es.promise';
 
+// loading animation
+const loadingElement = document.querySelector('.c-loading');
+
+if (loadingElement) {
+    function noScroll(event) {
+        event.preventDefault();
+    }
+
+    document.addEventListener('touchmove', noScroll, { passive: false });
+    document.addEventListener('wheel', noScroll, { passive: false });
+
+    setTimeout(function () {
+        loadingElement.classList.remove('is-loading');
+    }, 3000);
+
+    setTimeout(function () {
+        document.removeEventListener('touchmove', noScroll, { passive: false });
+        document.removeEventListener('wheel', noScroll, { passive: false });
+    }, 4000);
+}
+
+// AOS (Animation On Scroll)
+import AOS from 'aos';
+
+AOS.init({
+    offset: 80, // default 120
+    duration: 1000, // default 400
+    easing: 'ease-in-out-cubic', // default ease
+    delay: 0, // default 0
+    anchor: null, // default null
+    anchorPlacement: 'top-bottom', // default top-bottom
+    once: true, // default false
+});
+
 // hamburger menu toggle
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import * as focusTrap from 'focus-trap';
