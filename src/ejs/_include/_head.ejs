@@ -19,7 +19,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' maps.googleapis.com; img-src 'self' data: maps.gstatic.com *.googleapis.com *.ggpht.com *.ytimg.com *.youtube.com; child-src https://www.google.com/ https://www.youtube.com; font-src 'self' fonts.gstatic.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; base-uri 'none'; form-action 'self'; object-src 'none'; connect-src maps.googleapis.com;" /> -->
 
     <!-- OGP -->
-    <meta property="og:locale" content="<%= common['og:locale'] %>" />
+    <!-- <meta property="og:locale" content="<%= common['og:locale'] %>" />
     <meta property="og:locale:alternate" content="<%= common['og:locale:alternate'] %>" />
     <meta property="og:title" content="<%= page['title'] %> | <%= common['siteName'] %>" />
     <meta property="og:type" content="<%= page['og:type'] %>" />
@@ -31,20 +31,20 @@
     <meta property="og:image:height" content="<%= page['og:image:height'] %>" />
     <meta property="og:image:alt" content="<%= page['og:image:alt'] %>" />
     <meta property="og:description" content="<%= page['og:description'] %>" />
-    <meta property="og:site_name" content="<%= common['og:site_name'] %>" />
+    <meta property="og:site_name" content="<%= common['og:site_name'] %>" /> -->
 
     <!-- twitter card -->
-    <meta name="twitter:card" content="<%= common['twitter:card']  %>" />
+    <!-- <meta name="twitter:card" content="<%= common['twitter:card']  %>" />
     <meta name="twitter:site" content="<%= common['twitter:site']  %>" />
     <meta name="twitter:image" content="<%= path['img:ogp'] %><%= page['twitter:image']  %>" />
     <meta name="twitter:image:alt" content="<%= page['twitter:image:alt']  %>" />
-    <meta name="twitter:creator" content="<%= common['twitter:creator'] %>" />
+    <meta name="twitter:creator" content="<%= common['twitter:creator'] %>" /> -->
 
     <!-- facebook -->
-    <meta property="fb:app_id" content="<%= common['fb:app_id'] %>" />
+    <!-- <meta property="fb:app_id" content="<%= common['fb:app_id'] %>" /> -->
 
     <!-- favicon RealFaviconGenerator -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
@@ -52,16 +52,16 @@
     <meta name="apple-mobile-web-app-title" content="株式会社 園崎組" />
     <meta name="application-name" content="株式会社 園崎組" />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" /> -->
 
     <!-- if you do not use RealFaviconGenerator -->
     <!-- <link rel="shortcut icon" href="<%= path['root'] %>favicon.ico" /> -->
     <!-- <link rel="apple-touch-icon" href="<%= path['root'] %>webclip-150x150.png" /> -->
 
     <!-- canonical -->
-    <% if(process.env.NODE_ENV === 'production') { %>
+    <!-- <% if(process.env.NODE_ENV === 'production') { %>
     <link rel="canonical" href="https://shogo-log2.coding11ty.com" />
-    <% } %>
+    <% } %> -->
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,6 +71,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="<%= path['css'] %>destyle.css" />
     <link rel="stylesheet" href="<%= path['css'] %>swiper-bundle.css" />
+    <link rel="stylesheet" href="<%= path['css'] %>aos.css" />
     <link rel="stylesheet" href="<%= path['css'] %>style.css" />
 
     <!-- script -->
