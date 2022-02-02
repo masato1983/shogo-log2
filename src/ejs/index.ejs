@@ -107,7 +107,7 @@
             <section class="p-top-about l-section--about">
                 <div class="l-container l-container--md">
                     <div class="p-top-about__inner">
-                        <div class="p-top-about__media">
+                        <div class="p-top-about__media u-full-bleed-pc">
                             <picture>
                                 <source media="(min-width: <%= breakpoints['desktop'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-about-01-pc-1366x656.webp 1366w, <%= path['img:top'] %>top-about-01-pc-2732x1312.webp 2732w, <%= path['img:top'] %>top-about-01-pc-4098x1968.webp 4098w" />
                                 <source type="image/webp" sizes="(min-width: 1080px) 100vw, (min-width: 740px) 89.38vw, (min-width: 680px) 560px, calc(81.11vw + 25px)" srcset="<%= path['img:top'] %>top-about-01-sp-335x248.webp 335w, <%= path['img:top'] %>top-about-01-sp-670x496.webp 670w, <%= path['img:top'] %>top-about-01-sp-1005x744.webp 1005w" />
@@ -159,7 +159,7 @@
                             <ul class="p-top-works__list">
                                 <li class="p-top-works__item">
                                     <a href="#" class="c-card">
-                                        <div class="c-card__media">
+                                        <div class="c-card__media u-full-bleed-sp">
                                             <span class="c-card__number c-text__lg c-text--white">01</span>
                                             <picture>
                                                 <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-01-472x240.webp 472w, <%= path['img:top'] %>top-works-01-944x480.webp 944w, <%= path['img:top'] %>top-works-01-1416x720.webp 1416w" />
@@ -174,7 +174,7 @@
                                 </li>
                                 <li class="p-top-works__item">
                                     <a href="#" class="c-card">
-                                        <div class="c-card__media">
+                                        <div class="c-card__media u-full-bleed-sp">
                                             <span class="c-card__number c-text__lg c-text--white">02</span>
                                             <picture>
                                                 <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-02-472x240.webp 472w, <%= path['img:top'] %>top-works-02-944x480.webp 944w, <%= path['img:top'] %>top-works-02-1416x720.webp 1416w" />
@@ -201,6 +201,83 @@
                 </div>
             </section>
             <!-- end works section -->
+
+            <!-- recruit section -->
+            <section class="p-top-recruit l-section--recruit">
+                <div class="p-top-recruit__inner">
+                    <div class="p-top-recruit__header">
+                        <div class="l-container l-container--md">
+                            <div class="p-top-recruit__header-inner">
+                                <h2 class="p-top-recruit__title c-heading__level2 c-text--uppercase">recruit</h2>
+                                <span class="p-top-recruit__subtitle c-text__lg c-text--primary">採用情報</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-top-recruit__body">
+                        <div class="l-container l-container--md">
+                            <ul class="p-top-recruit__list">
+                                <li class="p-top-recruit__item u-full-bleed-sp">
+                                    <div class="p-top-recruit__media">
+                                        <picture>
+                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.webp 312w, <%= path['img:top'] %>top-recruit-01-624x480.webp 624w, <%= path['img:top'] %>top-recruit-01-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-01-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.png 312w, <%= path['img:top'] %>top-recruit-01-624x480.png 624w, <%= path['img:top'] %>top-recruit-01-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                        </picture>
+                                        <div class="p-top-recruit__article-title">
+                                            <a class="c-button c-button--recruit" href="#">
+                                                <p class="c-text--white">園崎組を知る</p>
+                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="p-top-recruit__item u-full-bleed-sp">
+                                    <div class="p-top-recruit__media">
+                                        <picture>
+                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.webp 312w, <%= path['img:top'] %>top-recruit-02-624x480.webp 624w, <%= path['img:top'] %>top-recruit-02-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-02-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.png 312w, <%= path['img:top'] %>top-recruit-02-624x480.png 624w, <%= path['img:top'] %>top-recruit-02-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                        </picture>
+                                        <div class="p-top-recruit__article-title">
+                                            <a class="c-button c-button--recruit" href="#">
+                                                <p class="c-text--white">園崎組の一日</p>
+                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="p-top-recruit__item u-full-bleed-sp">
+                                    <div class="p-top-recruit__media">
+                                        <picture>
+                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.webp 312w, <%= path['img:top'] %>top-recruit-03-624x480.webp 624w, <%= path['img:top'] %>top-recruit-03-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-03-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.png 312w, <%= path['img:top'] %>top-recruit-03-624x480.png 624w, <%= path['img:top'] %>top-recruit-03-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                        </picture>
+                                        <div class="p-top-recruit__article-title">
+                                            <a class="c-button c-button--recruit" href="#">
+                                                <p class="c-text--white">求める人物像</p>
+                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="l-section__button--recruit p-top-recruit__button">
+                            <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                <span>エントリーはこちら</span>
+                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end recruit section -->
         </main>
 
         <%- include('./_include/_footer') %>
