@@ -12,12 +12,9 @@
 /* service modifire */
 .l-section--service {
   margin-top: fs-rem(120px);
-  padding-bottom: fs-rem(48px);
 
   @include mq($from: desktop) {
     margin-top: fs-rem(160px);
-    padding-top: fs-rem(40px);
-    padding-bottom: fs-rem(0);
   }
 }
 
@@ -33,47 +30,27 @@
 /* works modifire */
 .l-section--works {
   margin-top: fs-rem(120px);
-  padding-top: fs-rem(32px);
-  padding-bottom: fs-rem(40px);
 
   @include mq($from: tablet) {
     margin-top: fs-rem(162px);
-    padding-top: fs-rem(0);
-    padding-bottom: fs-rem(0);
   }
 }
 
 /* recruit modifire */
 .l-section--recruit {
-  margin-top: fs-rem(120px);
+  margin-top: fs-rem(106px);
 
   @include mq($from: desktop) {
     margin-top: fs-rem(160px);
-    padding-top: fs-rem(80px);
   }
 }
 
 /* contact modifire */
 .l-section--contact {
   margin-top: fs-rem(120px);
-  padding-top: fs-rem(96px);
-  padding-bottom: fs-rem(96px);
 
   @include mq($from: desktop) {
     margin-top: fs-rem(80px);
-    padding-top: fs-rem(80px);
-    padding-bottom: fs-rem(80px);
-  }
-}
-
-/* footer modifire */
-.l-section--footer {
-  padding-top: fs-rem(40px);
-  padding-bottom: fs-rem(40px);
-
-  @include mq($from: desktop) {
-    padding-top: fs-rem(85px);
-    padding-bottom: fs-rem(120px);
   }
 }
 
@@ -86,27 +63,14 @@
 .l-section__body--about,
 .l-section__body--works,
 .l-section__body--contact {
-  padding-top: fs-rem(12px);
+  margin-top: fs-rem(12px);
 
   @include mq($from: tablet) {
-    padding-top: fs-rem(div(12px + 14px, 2));
+    margin-top: fs-rem(div(12px + 14px, 2));
   }
 
   @include mq($from: desktop) {
-    padding-top: fs-rem(14px);
-  }
-}
-
-/* recruit modifier (for body element) */
-.l-section__body--recruit {
-  padding-top: fs-rem(31px);
-
-  @include mq($from: tablet) {
-    padding-top: fs-rem(div(31px + 56px, 2));
-  }
-
-  @include mq($from: desktop) {
-    padding-top: fs-rem(56px);
+    margin-top: fs-rem(14px);
   }
 }
 
@@ -117,12 +81,27 @@
 /* service, about, works, recruit modifier (for button element) */
 .l-section__button--service,
 .l-section__button--about,
-.l-section__button--works,
 .l-section__button--recruit {
-  margin-top: fs-rem(29px);
+  margin-top: fs-rem(28px);
 
   @include mq($from: tablet) {
     margin-top: fs-rem(42px);
+  }
+}
+
+.l-section__button--works {
+  margin-top: fs-rem(36px);
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(42px);
+  }
+}
+
+.l-section__button--recruit {
+  margin-top: fs-rem(42px);
+
+  @include mq($from: tablet) {
+    margin-top: fs-rem(64px);
   }
 }
 
