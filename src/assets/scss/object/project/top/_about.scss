@@ -19,8 +19,6 @@
   @include mq($from: desktop) {
     height: fs-rem(656px);
     max-height: none;
-    margin-right: calc((50vw - 50%) * -1);
-    margin-left: calc((50vw - 50%) * -1);
   }
 }
 
