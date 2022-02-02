@@ -17,6 +17,7 @@ footer {
 }
 
 body {
+  overflow-x: hidden; // Workaround side-scrolling problem caused by full-bleed.
   color: var(--color-neutral-mid);
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-sm);
