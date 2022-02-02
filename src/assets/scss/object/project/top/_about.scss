@@ -48,6 +48,10 @@
   display: flex;
   align-items: flex-end;
   margin-top: fs-rem(-19px);
+
+  @include mq($from: tablet, $until: desktop) {
+    justify-content: center;
+  }
 }
 
 /* subtitle layout */
@@ -74,6 +78,13 @@
       height: fs-rem(30px);
       margin-right: fs-rem(18px);
     }
+  }
+}
+
+/* text layout */
+.p-top-about__text {
+  @include mq($from: tablet, $until: desktop) {
+    text-align: center;
   }
 }
 
