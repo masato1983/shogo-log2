@@ -84,7 +84,7 @@
         "@squoosh/cli": "0.7.2",
         "@typescript-eslint/eslint-plugin": "5.10.2",
         "@typescript-eslint/parser": "5.10.2",
-        "aos": "^3.0.0-beta.6",
+        "aos": "3.0.0-beta.6",
         "autoprefixer": "10.4.2",
         "babel-loader": "8.2.3",
         "body-scroll-lock": "4.0.0-beta.0",
