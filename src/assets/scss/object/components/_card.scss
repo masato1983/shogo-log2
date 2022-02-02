@@ -18,21 +18,6 @@
   }
 }
 
-/* inner style */
-.c-card__inner {
-  padding: fs-rem(39px) fs-rem(36px) fs-rem(0);
-  background-color: var(--color-neutral-lightest);
-  border: fs-rem(2px) solid var(--color-neutral-lighter);
-  border-radius: fs-rem(10px);
-
-  // only tablet style
-  @include mq($from: tablet, $until: desktop) {
-    flex-direction: row;
-    align-items: center;
-    padding: fs-rem(24px);
-  }
-}
-
 /* body layout */
 .c-card__body {
   display: flex; // Push the button to the bottom of the text box
@@ -71,14 +56,9 @@
 .c-card__media {
   @include fs-aspect-ratio(div(375, 160));
 
-  margin-right: calc((50vw - 50%) * -1);
-  margin-left: calc((50vw - 50%) * -1);
-
   @include mq($from: tablet) {
     @include fs-aspect-ratio(div(472, 240));
 
-    margin-right: 0;
-    margin-left: 0;
     overflow: visible;
   }
 }
