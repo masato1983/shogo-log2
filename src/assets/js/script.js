@@ -7,25 +7,6 @@ import 'core-js/modules/es.number.is-nan';
 import 'core-js/modules/es.string.repeat';
 import 'core-js/modules/es.promise';
 
-// loading animation
-const loadingElement = document.querySelector('.c-loading');
-
-function noScroll(event) {
-    event.preventDefault();
-}
-
-document.addEventListener('touchmove', noScroll, { passive: false });
-document.addEventListener('mousewheel', noScroll, { passive: false });
-
-setTimeout(function () {
-    loadingElement.classList.remove('is-loading');
-}, 3000);
-
-setTimeout(function () {
-    document.removeEventListener('touchmove', noScroll, { passive: false });
-    document.removeEventListener('mousewheel', noScroll, { passive: false });
-}, 4000);
-
 // hamburger menu toggle
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import * as focusTrap from 'focus-trap';
