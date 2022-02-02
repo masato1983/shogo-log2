@@ -8,14 +8,16 @@
 :root {
   /* primary color */
   --color-primary-mid: #4b6cb7;
-  --color-primary-mid-alpha: rgba(75, 108, 183, 0.5);
+  --color-primary-mid-alpha-middle: rgba(75, 108, 183, 0.5);
 
   /* secondary color */
   --color-secondary-mid: #b8614b;
+  --color-secondary-mid-alpha-middle: rgba(184, 97, 75, 0.5);
 
   /* neutral color */
   --color-neutral-darken: #000;
   --color-neutral-darker: #182848;
+  --color-neutral-darker-alpha-low: rgba(24, 40, 72, 0.64); // IE11 does not support the alpha-value as percent
   --color-neutral-darker-alpha-middle: rgba(24, 40, 72, 0.46); // IE11 does not support the alpha-value as percent
   --color-neutral-mid: #191919;
   --color-neutral-mid-alpha-middle: rgba(25, 25, 25, 0.46); // IE11 does not support the alpha-value as percent
