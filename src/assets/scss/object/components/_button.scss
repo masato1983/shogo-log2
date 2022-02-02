@@ -38,6 +38,28 @@
   }
 }
 
+/* recruit modifier */
+.c-button--recruit {
+  padding: fs-rem(13px) fs-rem(20px);
+  background-color: transparent;
+
+  @include mq($from: tablet) {
+    justify-content: space-between;
+    padding: fs-rem(10px) fs-rem(14px);
+    background-color: var(--color-neutral-darker-alpha-low);
+    transition: background-color 0.3s var(--ease-in-out-cubic);
+
+    // hover style
+    @include hover { // https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/, https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/, https://css-tricks.com/touch-devices-not-judged-size/, https://www.npmjs.com/package/hover-media-query
+      background-color: var(--color-neutral-darker-alpha-middle);
+    }
+  }
+
+  @include mq($from: desktop) {
+    padding: fs-rem(13px) fs-rem(20px);
+  }
+}
+
 /* primary modifier */
 .c-button--primary { // https://whocanuse.com/, https://webaim.org/resources/contrastchecker/
   background-color: var(--color-primary-mid);
@@ -45,7 +67,29 @@
 
   // hover style
   @include hover { // https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/, https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/, https://css-tricks.com/touch-devices-not-judged-size/, https://www.npmjs.com/package/hover-media-query
-    background-color: var(--color-primary-mid-alpha);
+    background-color: var(--color-primary-mid-alpha-middle);
+  }
+}
+
+/* secondary modifier */
+.c-button--secondary { // https://whocanuse.com/, https://webaim.org/resources/contrastchecker/
+  background-color: var(--color-secondary-mid);
+  transition: background-color 0.3s var(--ease-in-out-cubic);
+
+  // hover style
+  @include hover { // https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/, https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/, https://css-tricks.com/touch-devices-not-judged-size/, https://www.npmjs.com/package/hover-media-query
+    background-color: var(--color-secondary-mid-alpha-middle);
+  }
+}
+
+/* black modifier */
+.c-button--black { // https://whocanuse.com/, https://webaim.org/resources/contrastchecker/
+  background-color: var(--color-neutral-mid);
+  transition: background-color 0.3s var(--ease-in-out-cubic);
+
+  // hover style
+  @include hover { // https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/, https://css-tricks.com/interaction-media-features-and-their-potential-for-incorrect-assumptions/, https://css-tricks.com/touch-devices-not-judged-size/, https://www.npmjs.com/package/hover-media-query
+    background-color: var(--color-neutral-mid-alpha-middle);
   }
 }
 
