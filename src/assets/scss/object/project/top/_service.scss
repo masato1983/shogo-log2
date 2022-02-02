@@ -72,6 +72,10 @@
 .p-top-service__header {
   display: flex;
   align-items: flex-end;
+
+  @include mq($from: tablet, $until: desktop) {
+    justify-content: center;
+  }
 }
 
 /* subtitle layout */
@@ -98,6 +102,13 @@
       height: fs-rem(30px);
       margin-right: fs-rem(18px);
     }
+  }
+}
+
+/* textbox layout */
+.p-top-service__textbox {
+  @include mq($from: tablet, $until: desktop) {
+    text-align: center;
   }
 }
 
