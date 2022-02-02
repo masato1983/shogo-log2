@@ -7,9 +7,13 @@
 
 /* works overview */
 .p-top-works {
+  padding-top: fs-rem(32px);
+  padding-bottom: fs-rem(40px);
   background: linear-gradient(115deg, var(--color-neutral-lighter) 0% 12%, var(--color-neutral-lightest) 12% 88%, var(--color-neutral-lighter) 88% 100%);
 
   @include mq($from: tablet) {
+    padding-top: fs-rem(0);
+    padding-bottom: fs-rem(0);
     background: linear-gradient(45deg, var(--color-neutral-lighter) 0% 10%, var(--color-neutral-lightest) 10% 90%, var(--color-neutral-lighter) 90% 100%);
   }
 }
