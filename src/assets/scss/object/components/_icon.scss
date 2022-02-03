@@ -5,11 +5,47 @@
 @use '../../abstracts/' as *;
 @use 'sass:math' as *;
 
-/* arrow style */
-.c-icon__arrow {
+/* base style */
+.c-icon {
   display: inline-block;
-  width: fs-rem(19.5px);
-  height: fs-rem(7.5px);
   vertical-align: middle;
   fill: var(--color-neutral-lightest);
+}
+
+/* arrow style */
+.c-icon__arrow {
+  width: fs-rem(19.5px);
+  height: fs-rem(7.5px);
+}
+
+/* backhoe style */
+.c-icon__backhoe {
+  width: fs-rem(16px);
+  height: fs-rem(12px);
+
+  @include mq($from: tablet) {
+    width: calc((16px + 24px) / 2);
+    height: calc((12px + 18px) / 2);
+  }
+
+  @include mq($from: desktop) {
+    width: fs-rem(24px);
+    height: fs-rem(18px);
+  }
+}
+
+/* factory style */
+.c-icon__factory {
+  width: fs-rem(14px);
+  height: fs-rem(12px);
+
+  @include mq($from: tablet) {
+    width: calc((14px + 20px) / 2);
+    height: calc((12px + 17px) / 2);
+  }
+
+  @include mq($from: desktop) {
+    width: fs-rem(20px);
+    height: fs-rem(17px);
+  }
 }
