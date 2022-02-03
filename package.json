@@ -75,7 +75,7 @@
     },
     "homepage": "https://github.com/masato1983/shogo-log2#readme",
     "devDependencies": {
-        "@babel/core": "7.16.12",
+        "@babel/core": "7.17.0",
         "@babel/preset-env": "7.16.11",
         "@googlemaps/js-api-loader": "1.13.4",
         "@linthtml/linthtml": "0.8.4",
