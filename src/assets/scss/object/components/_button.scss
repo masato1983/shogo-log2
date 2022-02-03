@@ -33,8 +33,32 @@
   padding-bottom: fs-rem(11px);
 
   @include mq($from: tablet) {
+    padding-top: fs-rem(16px);
+    padding-bottom: fs-rem(16px);
+  }
+
+  @include mq($from: desktop) {
     padding-top: fs-rem(20px);
     padding-bottom: fs-rem(20px);
+  }
+}
+
+/* large button */
+.c-button--large {
+  max-width: fs-rem(335px);
+  padding-top: fs-rem(14px);
+  padding-bottom: fs-rem(14px);
+
+  @include mq($from: tablet) {
+    // max-width: fs-rem(280px);
+    max-width: fs-rem(320px);
+    padding-top: fs-rem(16px);
+    padding-bottom: fs-rem(16px);
+  }
+
+  @include mq($from: desktop) {
+    padding-top: fs-rem(24px);
+    padding-bottom: fs-rem(24px);
   }
 }
 
@@ -98,7 +122,12 @@
   box-shadow: fs-rem(0) fs-rem(2px) fs-rem(4px) var(--color-neutral-darker-alpha-middle);
 }
 
+/* arrow layout */
+.c-button__arrow {
+  margin-left: fs-rem(15px);
+}
+
 /* icon layout */
 .c-button__icon {
-  margin-left: fs-rem(15px);
+  margin-right: fs-rem(15px);
 }
