@@ -2,18 +2,23 @@
 <html lang="ja">
     <%- include('./_include/_head', {page: top}); %>
     <body>
-        <%- include('./_include/_loading'); %> <%- include('./_include/_header', { page: 'top' }); %>
+        <!-- loading -->
+        <%- include('./_include/_loading'); %>
 
+        <!-- header -->
+        <%- include('./_include/_header', { page: 'top' }); %>
+
+        <!-- main section -->
         <main class="l-main">
             <!-- top-kv -->
             <div class="p-top-kv">
-                <div class="l-container l-container--xl">
+                <div class="l-container l-container__max-width--xl">
                     <div class="p-top-kv__inner">
                         <div class="p-top-kv__swiper swiper">
                             <div class="p-top-kv__swiper-wrapper swiper-wrapper">
                                 <div class="p-top-kv__media swiper-slide">
                                     <picture>
-                                        <source media="(min-width: <%= breakpoints['tablet'] %>)" type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-01-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-01-2732x1376.webp 2732w" />
+                                        <source type="image/webp" media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-01-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-01-2732x1376.webp 2732w" />
                                         <source type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-01-375x611.webp 375w, <%= path['img:top'] %>top-kv-01-750x1222.webp 750w" />
                                         <source media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-01-1366x688.png 1366w, <%= path['img:top'] %>top-kv-01-2732x1376.png 2732w" />
                                         <img class="p-top-kv__image" width="750" height="1222" src="<%= path['img:top'] %>top-kv-01-750x1222.png" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-01-375x611.png 375w, <%= path['img:top'] %>top-kv-01-750x1222.png 750w" alt="" decoding="async" loading="eager" />
@@ -21,7 +26,7 @@
                                 </div>
                                 <div class="p-top-kv__media swiper-slide">
                                     <picture>
-                                        <source media="(min-width: <%= breakpoints['tablet'] %>)" type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-02-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-02-2732x1376.webp 2732w" />
+                                        <source type="image/webp" media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-02-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-02-2732x1376.webp 2732w" />
                                         <source type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-02-375x611.webp 375w, <%= path['img:top'] %>top-kv-02-750x1222.webp 750w" />
                                         <source media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-02-1366x688.png 1366w, <%= path['img:top'] %>top-kv-02-2732x1376.png 2732w" />
                                         <img class="p-top-kv__image" width="750" height="1222" src="<%= path['img:top'] %>top-kv-02-750x1222.png" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-02-375x611.png 375w, <%= path['img:top'] %>top-kv-02-750x1222.png 750w" alt="" decoding="async" loading="eager" />
@@ -29,7 +34,7 @@
                                 </div>
                                 <div class="p-top-kv__media swiper-slide">
                                     <picture>
-                                        <source media="(min-width: <%= breakpoints['tablet'] %>)" type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-03-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-03-2732x1376.webp 2732w" />
+                                        <source type="image/webp" media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-03-1366x688.webp 1366w, <%= path['img:top'] %>top-kv-03-2732x1376.webp 2732w" />
                                         <source type="image/webp" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-03-375x611.webp 375w, <%= path['img:top'] %>top-kv-03-750x1222.webp 750w" />
                                         <source media="(min-width: <%= breakpoints['tablet'] %>)" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-03-1366x688.png 1366w, <%= path['img:top'] %>top-kv-03-2732x1376.png 2732w" />
                                         <img class="p-top-kv__image" width="750" height="1222" src="<%= path['img:top'] %>top-kv-03-750x1222.png" sizes="(min-width: 1920px) 1920px, (min-width: 1400px) 1400px, (min-width: 1160px) 1160px, (min-width: 960px) 960px, (min-width: 760px) 760px, (min-width: 640px) 640px, (min-width: 440px) 440px, 300px" srcset="<%= path['img:top'] %>top-kv-03-375x611.png 375w, <%= path['img:top'] %>top-kv-03-750x1222.png 750w" alt="" decoding="async" loading="eager" />
@@ -60,7 +65,7 @@
                                 <p class="c-news__title">新サイトを公開しました。</p>
                             </div>
                             <div class="c-news__footer">
-                                <svg class="c-news__arrow c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="c-news__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                 </svg>
                             </div>
@@ -72,7 +77,7 @@
 
             <!-- service section -->
             <section class="p-top-service l-section--service" data-aos="fade-in">
-                <div class="l-container l-container--xl">
+                <div class="l-container l-container__max-width--xl">
                     <div class="p-top-service__inner">
                         <div class="p-top-service__media">
                             <picture>
@@ -81,9 +86,9 @@
                             </picture>
                         </div>
                         <div class="p-top-service__body">
-                            <div class="p-top-service__header">
+                            <div class="l-section__header p-top-service__header">
                                 <h2 class="p-top-service__title c-heading__level2 c-text--uppercase">services</h2>
-                                <span class="p-top-service__subtitle c-text__lg c-text--primary">事業内容</span>
+                                <span class="l-section__subtitle c-text__lg c-text--primary">事業内容</span>
                             </div>
                             <div class="l-section__body--service p-top-service__textbox">
                                 <h3 class="p-top-service__copy c-heading__level3"><span class="u-break-sp-only u-break-desktop">人々の生活基盤を</span><span class="u-break-sp-only u-break-desktop">世界最高峰の技術で支える</span></h3>
@@ -92,7 +97,7 @@
                             <div class="l-section__button--service p-top-service__button">
                                 <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
                                     <span>事業内容を更に知る</span>
-                                    <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                     </svg>
                                 </a>
@@ -105,20 +110,20 @@
 
             <!-- about section -->
             <section class="p-top-about l-section--about" data-aos="fade-in">
-                <div class="l-container l-container--md">
+                <div class="l-container l-container__width--normal l-container__max-width--md">
                     <div class="p-top-about__inner">
                         <div class="p-top-about__media u-full-bleed-tablet">
                             <picture>
-                                <source media="(min-width: <%= breakpoints['desktop'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-about-01-pc-1366x656.webp 1366w, <%= path['img:top'] %>top-about-01-pc-2732x1312.webp 2732w, <%= path['img:top'] %>top-about-01-pc-4098x1968.webp 4098w" />
-                                <source type="image/webp" sizes="(min-width: 1080px) 100vw, (min-width: 740px) 89.38vw, (min-width: 680px) 560px, calc(81.11vw + 25px)" srcset="<%= path['img:top'] %>top-about-01-sp-335x248.webp 335w, <%= path['img:top'] %>top-about-01-sp-670x496.webp 670w, <%= path['img:top'] %>top-about-01-sp-1005x744.webp 1005w" />
+                                <source type="image/webp" media="(min-width: <%= breakpoints['desktop'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-about-01-pc-1366x656.webp 1366w, <%= path['img:top'] %>top-about-01-pc-2732x1312.webp 2732w, <%= path['img:top'] %>top-about-01-pc-4098x1968.webp 4098w" />
+                                <source type="image/webp" sizes="(min-width: 740px) 100vw, 89.29vw" srcset="<%= path['img:top'] %>top-about-01-sp-335x248.webp 335w, <%= path['img:top'] %>top-about-01-sp-670x496.webp 670w, <%= path['img:top'] %>top-about-01-sp-1005x744.webp 1005w" />
                                 <source media="(min-width: <%= breakpoints['desktop'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-about-01-pc-1366x656.png 1366w, <%= path['img:top'] %>top-about-01-pc-2732x1312.png 2732w, <%= path['img:top'] %>top-about-01-pc-4098x1968.png 4098w" />
-                                <img class="p-top-about__image" width="670" height="496" src="<%= path['img:top'] %>top-about-01-sp-670x496.png" sizes="(min-width: 1080px) 100vw, (min-width: 740px) 89.38vw, (min-width: 680px) 560px, calc(81.11vw + 25px)" srcset="<%= path['img:top'] %>top-about-01-sp-335x248.png 335w, <%= path['img:top'] %>top-about-01-sp-670x496.png 670w, <%= path['img:top'] %>top-about-01-sp-1005x744.png 1005w" alt="" decoding="async" loading="lazy" />
+                                <img class="p-top-about__image" width="670" height="496" src="<%= path['img:top'] %>top-about-01-sp-670x496.png" sizes="(min-width: 740px) 100vw, 89.29vw" srcset="<%= path['img:top'] %>top-about-01-sp-335x248.png 335w, <%= path['img:top'] %>top-about-01-sp-670x496.png 670w, <%= path['img:top'] %>top-about-01-sp-1005x744.png 1005w" alt="" decoding="async" loading="lazy" />
                             </picture>
                         </div>
                         <div class="p-top-about__body">
-                            <div class="p-top-about__header">
+                            <div class="l-section__header p-top-about__header">
                                 <h2 class="p-top-about__title c-heading__level2 c-text--uppercase">about</h2>
-                                <span class="p-top-about__subtitle c-text__lg c-text--primary">園崎組について</span>
+                                <span class="l-section__subtitle c-text__lg c-text--primary">園崎組について</span>
                             </div>
                             <div class="l-section__body--about p-top-about__textbox">
                                 <p class="p-top-about__text c-text__md"><span class="u-break-desktop">園崎組は埼玉県秩父市にて、主に土木工事にて</span><span class="u-break-desktop">社会基盤を支える企業になります。</span><br class="u-visible-sp" /><span class="u-break-desktop">また、自社工場において施工に必要とされる</span><span class="u-break-desktop">各種資材も生産しており、各業者に提供することで、</span><span class="u-break-desktop">社会基盤の構築・整備に貢献しております。</span></p>
@@ -126,7 +131,7 @@
                             <div class="l-section__button--about p-top-about__button">
                                 <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
                                     <span>詳しく見る</span>
-                                    <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                     </svg>
                                 </a>
@@ -145,11 +150,11 @@
 
             <!-- works section -->
             <section class="p-top-works l-section--works" data-aos="fade-in">
-                <div class="l-container l-container--sm">
+                <div class="l-container l-container__width--normal l-container__max-width--sm">
                     <div class="p-top-works__inner">
-                        <div class="p-top-works__header">
+                        <div class="l-section__header">
                             <h2 class="p-top-works__title c-heading__level2 c-text--uppercase">works</h2>
-                            <span class="p-top-works__subtitle c-text__lg c-text--primary">園崎組の実績</span>
+                            <span class="l-section__subtitle c-text__lg c-text--primary">園崎組の実績</span>
                         </div>
                         <div class="l-section__body--works p-top-works__textbox">
                             <p class="p-top-works__copy c-heading__level3"><span class="u-break-sp-only">社会を基礎から、</span><span class="u-break-sp-only">変革してきたプロジェクト</span></p>
@@ -162,8 +167,8 @@
                                         <div class="c-card__media u-full-bleed-mobile">
                                             <span class="c-card__number c-text__lg c-text--white">01</span>
                                             <picture>
-                                                <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-01-472x240.webp 472w, <%= path['img:top'] %>top-works-01-944x480.webp 944w, <%= path['img:top'] %>top-works-01-1416x720.webp 1416w" />
-                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-01-944x480.png" alt="" sizes="40vw" srcset="<%= path['img:top'] %>top-works-01-472x240.png 472w, <%= path['img:top'] %>top-works-01-944x480.png 944w, <%= path['img:top'] %>top-works-01-1416x720.png 1416w" decoding="async" loading="lazy" />
+                                                <source type="image/webp" sizes="(min-width: 1180px) 472px, (min-width: 740px) calc(38.33vw + 27px), 100vw" srcset="<%= path['img:top'] %>top-works-01-472x240.webp 472w, <%= path['img:top'] %>top-works-01-944x480.webp 944w, <%= path['img:top'] %>top-works-01-1416x720.webp 1416w" />
+                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-01-944x480.png" alt="" sizes="(min-width: 1180px) 472px, (min-width: 740px) calc(38.33vw + 27px), 100vw" srcset="<%= path['img:top'] %>top-works-01-472x240.png 472w, <%= path['img:top'] %>top-works-01-944x480.png 944w, <%= path['img:top'] %>top-works-01-1416x720.png 1416w" decoding="async" loading="lazy" />
                                             </picture>
                                         </div>
                                         <div class="c-card__body">
@@ -177,8 +182,8 @@
                                         <div class="c-card__media u-full-bleed-mobile">
                                             <span class="c-card__number c-text__lg c-text--white">02</span>
                                             <picture>
-                                                <source type="image/webp" sizes="40vw" srcset="<%= path['img:top'] %>top-works-02-472x240.webp 472w, <%= path['img:top'] %>top-works-02-944x480.webp 944w, <%= path['img:top'] %>top-works-02-1416x720.webp 1416w" />
-                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-02-944x480.png" alt="" sizes="40vw" srcset="<%= path['img:top'] %>top-works-02-472x240.png 472w, <%= path['img:top'] %>top-works-02-944x480.png 944w, <%= path['img:top'] %>top-works-02-1416x720.png 1416w" decoding="async" loading="lazy" />
+                                                <source type="image/webp" sizes="(min-width: 1180px) 472px, (min-width: 740px) calc(38.33vw + 27px), 100vw" srcset="<%= path['img:top'] %>top-works-02-472x240.webp 472w, <%= path['img:top'] %>top-works-02-944x480.webp 944w, <%= path['img:top'] %>top-works-02-1416x720.webp 1416w" />
+                                                <img class="c-card__image" width="944" height="480" src="<%= path['img:top'] %>top-works-02-944x480.png" alt="" sizes="(min-width: 1180px) 472px, (min-width: 740px) calc(38.33vw + 27px), 100vw" srcset="<%= path['img:top'] %>top-works-02-472x240.png 472w, <%= path['img:top'] %>top-works-02-944x480.png 944w, <%= path['img:top'] %>top-works-02-1416x720.png 1416w" decoding="async" loading="lazy" />
                                             </picture>
                                         </div>
                                         <div class="c-card__body">
@@ -191,7 +196,7 @@
                             <div class="l-section__button--works p-top-works__button">
                                 <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
                                     <span>実績一覧を見る</span>
-                                    <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                     </svg>
                                 </a>
@@ -206,26 +211,26 @@
             <section class="p-top-recruit l-section--recruit" data-aos="fade-in">
                 <div class="p-top-recruit__inner">
                     <div class="p-top-recruit__header">
-                        <div class="l-container l-container--md">
-                            <div class="p-top-recruit__header-inner">
+                        <div class="l-container l-container__width--normal l-container__max-width--md">
+                            <div class="l-section__header">
                                 <h2 class="p-top-recruit__title c-heading__level2 c-text--uppercase">recruit</h2>
-                                <span class="p-top-recruit__subtitle c-text__lg c-text--primary">採用情報</span>
+                                <span class="l-section__subtitle c-text__lg c-text--primary">採用情報</span>
                             </div>
                         </div>
                     </div>
                     <div class="p-top-recruit__body">
-                        <div class="l-container l-container--md">
+                        <div class="l-container l-container__width--normal l-container__max-width--md">
                             <ul class="p-top-recruit__list">
                                 <li class="p-top-recruit__item u-full-bleed-mobile">
                                     <div class="p-top-recruit__media">
                                         <picture>
-                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.webp 312w, <%= path['img:top'] %>top-recruit-01-624x480.webp 624w, <%= path['img:top'] %>top-recruit-01-936x720.webp 936w" />
-                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-01-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.png 312w, <%= path['img:top'] %>top-recruit-01-624x480.png 624w, <%= path['img:top'] %>top-recruit-01-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                            <source type="image/webp" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.webp 312w, <%= path['img:top'] %>top-recruit-01-624x480.webp 624w, <%= path['img:top'] %>top-recruit-01-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-01-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.png 312w, <%= path['img:top'] %>top-recruit-01-624x480.png 624w, <%= path['img:top'] %>top-recruit-01-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                         </picture>
                                         <div class="p-top-recruit__article-title">
                                             <a class="c-button c-button--recruit" href="#">
                                                 <p class="c-text--white">園崎組を知る</p>
-                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                     <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                                 </svg>
                                             </a>
@@ -235,13 +240,13 @@
                                 <li class="p-top-recruit__item u-full-bleed-mobile">
                                     <div class="p-top-recruit__media">
                                         <picture>
-                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.webp 312w, <%= path['img:top'] %>top-recruit-02-624x480.webp 624w, <%= path['img:top'] %>top-recruit-02-936x720.webp 936w" />
-                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-02-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.png 312w, <%= path['img:top'] %>top-recruit-02-624x480.png 624w, <%= path['img:top'] %>top-recruit-02-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                            <source type="image/webp" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.webp 312w, <%= path['img:top'] %>top-recruit-02-624x480.webp 624w, <%= path['img:top'] %>top-recruit-02-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-02-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.png 312w, <%= path['img:top'] %>top-recruit-02-624x480.png 624w, <%= path['img:top'] %>top-recruit-02-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                         </picture>
                                         <div class="p-top-recruit__article-title">
                                             <a class="c-button c-button--recruit" href="#">
                                                 <p class="c-text--white">園崎組の一日</p>
-                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                     <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                                 </svg>
                                             </a>
@@ -251,13 +256,13 @@
                                 <li class="p-top-recruit__item u-full-bleed-mobile">
                                     <div class="p-top-recruit__media">
                                         <picture>
-                                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.webp 312w, <%= path['img:top'] %>top-recruit-03-624x480.webp 624w, <%= path['img:top'] %>top-recruit-03-936x720.webp 936w" />
-                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-03-624x480.png" sizes="100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.png 312w, <%= path['img:top'] %>top-recruit-03-624x480.png 624w, <%= path['img:top'] %>top-recruit-03-936x720.png 936w" alt="" decoding="async" loading="lazy" />
+                                            <source type="image/webp" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.webp 312w, <%= path['img:top'] %>top-recruit-03-624x480.webp 624w, <%= path['img:top'] %>top-recruit-03-936x720.webp 936w" />
+                                            <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-03-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.png 312w, <%= path['img:top'] %>top-recruit-03-624x480.png 624w, <%= path['img:top'] %>top-recruit-03-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                         </picture>
                                         <div class="p-top-recruit__article-title">
                                             <a class="c-button c-button--recruit" href="#">
                                                 <p class="c-text--white">求める人物像</p>
-                                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                                <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                     <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                                 </svg>
                                             </a>
@@ -269,7 +274,7 @@
                         <div class="l-section__button--recruit p-top-recruit__button">
                             <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
                                 <span>エントリーはこちら</span>
-                                <svg class="c-button__icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
                                 </svg>
                             </a>
@@ -278,8 +283,66 @@
                 </div>
             </section>
             <!-- end recruit section -->
-        </main>
 
+            <!-- contact section -->
+            <section class="p-top-contact" data-aos="fade-in">
+                <div class="p-top-contact__inner">
+                    <div class="p-top-contact__media">
+                        <picture>
+                            <source type="image/webp" media="(min-width: <%= breakpoints['tablet'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-contact-pc-1366x411.webp 1366w, <%= path['img:top'] %>top-contact-pc-2732x822.webp 2732w, <%= path['img:top'] %>top-contact-pc-4098x1233.webp 4098w" />
+                            <source type="image/webp" sizes="100vw" srcset="<%= path['img:top'] %>top-contact-sp-375x480.webp 375w, <%= path['img:top'] %>top-contact-sp-750x960.webp 750w, <%= path['img:top'] %>top-contact-sp-1125x1440.webp 1125w" />
+                            <source media="(min-width: <%= breakpoints['tablet'] %>)" sizes="100vw" srcset="<%= path['img:top'] %>top-contact-pc-1366x411.png 1366w, <%= path['img:top'] %>top-contact-pc-2732x822.png 2732w, <%= path['img:top'] %>top-contact-pc-4098x1233.png 4098w" />
+                            <img class="p-top-contact__image" width="750" height="960" src="<%= path['img:top'] %>top-contact-sp-750x960.png" sizes="100vw" srcset="<%= path['img:top'] %>top-contact-sp-375x480.png 375w, <%= path['img:top'] %>top-contact-sp-750x960.png 750w, <%= path['img:top'] %>top-contact-sp-1125x1440.png 1125w" alt="" decoding="async" loading="lazy" />
+                        </picture>
+                    </div>
+                    <div class="p-top-contact__contents">
+                        <div class="l-container l-container__width--normal l-container__max-width--xs">
+                            <div class="l-section__header p-top-contact__header">
+                                <h2 class="p-top-contact__title c-heading__level2 c-text--white c-text--uppercase">contact</h2>
+                                <span class="l-section__subtitle l-section__subtitle--white c-text__lg c-text--white">お問い合わせ</span>
+                            </div>
+                            <div class="l-section__body--contact p-top-contact__body">
+                                <p class="c-text__md c-text--white">
+                                    <span class="u-break-tablet">園崎組では一般的な施工から特注部品、<br class="u-visible-tablet-only" />機械の開発・製造まで一貫して対応しております。</span><span class="u-break-tablet">お気軽にご連絡ください。</span>
+                                </p>
+                            </div>
+                            <div class="p-top-contact__footer">
+                                <div class="l-section__button--contact p-top-contact__button">
+                                    <a class="c-button c-button--large c-button--secondary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                        <svg class="c-button__icon c-icon c-icon__backhoe" viewBox="0 0 16 12" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                fill-rule="evenodd"
+                                                fill="#FFF"
+                                                d="M15.451 10.9a15.069 15.069 0 0 0-2.653 0l-.988-1.799.399-.4.6.6 1.49-1.491a.83.83 0 0 1-.121-.621L12.225 3.63c-.081.015.375.024-.25.024-.142 0-.278-.024-.407-.065L10.225 5.26v1.269a.744.744 0 0 1-.744.744H6.884v.457h2.422a2.05 2.05 0 0 1 1.454.603 2.053 2.053 0 0 1 0 2.909c-.37.371-.888.603-1.454.603H2.57c-1.08 0-1.597-.232-1.968-.603a2.056 2.056 0 0 1 0-2.909c.37-.372.888-.603 1.968-.603h1.09v-.457H1.305a.744.744 0 0 1-.744-.744V4.795c0-.41.333-.275.744-.275h.565V1.169c0-.561.454-1.015 1.014-1.015H5.67c.561 0 1.015.454 1.015 1.015V4.52h2.18l1.802-2.271c.048-.681.614-.959 1.308-.959.725 0 1.312.327 1.312 1.052 0 .166-.032.324-.088.471l2.161 3.706c.119.021.473.386.473.834a.83.83 0 0 1-.116.422c.45.723 1.083 1.686-.266 3.125zM5.253 1.585H3.301v2.308h1.952V1.585zm.901 7.987v-.649h-.945v.649H4.195v-.649h-.944v.649H2.236v-.649h.334c-.754.001-.966.267-1.124.253a.857.857 0 0 0-.253.611c0 .493.095.453.253.611.158.157.37.253 1.124.253h.646v-.443H4.23v.443h.944v-.443h1.015v.443h.944v-.443h1.014v.443h1.159a.86.86 0 0 0 .611-.253c.823-.158.253-.118.253-.611 0-.24.57-.452-.253-.611-.158.014-.371-.252-.611-.253h-.179v.649H8.112v-.649h-.944v.649H6.154zm5.821-7.668a.438.438 0 1 0 .437.438c0 .648-.196-.438-.437-.438zm3.022 5.336c-.181 0-.328-.069-.328.113a.328.328 0 0 0 .657 0c0-.182-.147-.113-.329-.113z"
+                                            />
+                                        </svg>
+                                        <span>施工のご相談</span>
+                                        <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="l-section__button--contact p-top-contact__button">
+                                    <a class="c-button c-button--large c-button--black c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                        <svg class="c-button__icon c-icon c-icon__factory" viewBox="0 0 14 12" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" fill="#FFF" d="M9.507 11.999H0V0l4.492 2.687V0l4.492 2.687V0l5.015 2.999v9H9.507zm-3.88-6H3.761v1.914h1.866V5.999zm4.611 0H8.372v1.914h1.866V5.999z" />
+                                        </svg>
+                                        <span>特注制作のご相談</span>
+                                        <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end contact section -->
+        </main>
+        <!-- end main section -->
+
+        <!-- footer -->
         <%- include('./_include/_footer') %>
     </body>
 </html>
