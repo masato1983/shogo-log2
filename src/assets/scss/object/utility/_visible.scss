@@ -20,6 +20,15 @@
   }
 }
 
+/* tablet only */
+.u-visible-tablet-only {
+  display: none;
+
+  @include mq($from: tablet, $until: desktop) {
+    display: inline;
+  }
+}
+
 /* desktop */
 .u-visible-desktop {
   display: none;
