@@ -45,20 +45,59 @@
   }
 }
 
-/* contact modifire */
-.l-section--contact {
-  margin-top: fs-rem(120px);
+// ==========================================================================
+// Section Header
+// ==========================================================================
+
+/* header element */
+.l-section__header {
+  display: flex;
+  align-items: flex-end;
+
+  @include mq($from: tablet) {
+    justify-content: center;
+  }
+}
+
+/* subtitle element */
+.l-section__subtitle {
+  display: flex;
+  align-items: center;
+  margin-left: fs-rem(16px);
+  padding-bottom: fs-rem(6px);
 
   @include mq($from: desktop) {
-    margin-top: fs-rem(80px);
+    padding-bottom: fs-rem(10px);
+  }
+
+  &::before {
+    display: block;
+    width: fs-rem(2px);
+    height: fs-rem(22px);
+    margin-right: fs-rem(14px);
+    background-color: var(--color-primary-mid);
+    transform: rotate(40deg);
+    content: '';
+
+    @include mq($from: desktop) {
+      height: fs-rem(30px);
+      margin-right: fs-rem(18px);
+    }
+  }
+}
+
+/* white modifier */
+.l-section__subtitle--white {
+  &::before {
+    background-color: var(--color-neutral-lightest);
   }
 }
 
 // ==========================================================================
-// Body modifier
+// Section Body
 // ==========================================================================
 
-/* service, about, works, contact modifier (for body element) */
+/* body element (service, about, works, contact) */
 .l-section__body--service,
 .l-section__body--about,
 .l-section__body--works,
@@ -75,13 +114,12 @@
 }
 
 // ==========================================================================
-// For Button modifier
+// Button element
 // ==========================================================================
 
-/* service, about, works, recruit modifier (for button element) */
+/* button element (service, about) */
 .l-section__button--service,
-.l-section__button--about,
-.l-section__button--recruit {
+.l-section__button--about {
   margin-top: fs-rem(28px);
 
   @include mq($from: tablet) {
@@ -89,6 +127,7 @@
   }
 }
 
+/* button element (works) */
 .l-section__button--works {
   margin-top: fs-rem(36px);
 
@@ -97,6 +136,7 @@
   }
 }
 
+/* button element (recruit) */
 .l-section__button--recruit {
   margin-top: fs-rem(42px);
 
@@ -105,15 +145,15 @@
   }
 }
 
-/* contact modifier (for button element) */
+/* button element (contact) */
 .l-section__button--contact {
-  margin-top: fs-rem(32px);
+  margin-top: fs-rem(24px);
 
   @include mq($from: tablet) {
-    padding-top: fs-rem(div(32px + 56px, 2));
+    margin-top: fs-rem(div(24px + 47px, 2));
   }
 
   @include mq($from: desktop) {
-    margin-top: fs-rem(56px);
+    margin-top: fs-rem(47px);
   }
 }
