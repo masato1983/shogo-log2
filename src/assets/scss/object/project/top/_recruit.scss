@@ -17,45 +17,13 @@
   }
 }
 
-/* header-inner layout */
-.p-top-recruit__header-inner {
-  display: flex;
-  align-items: flex-end;
-
-  @include mq($from: tablet) {
-    justify-content: center;
-  }
-}
-
 /* body layout */
 .p-top-recruit__body {
+  padding-bottom: fs-rem(120px);
   background-color: var(--color-neutral-lighter);
-}
 
-/* subtitle layout */
-.p-top-recruit__subtitle {
-  display: flex;
-  align-items: center;
-  margin-left: fs-rem(16px);
-  padding-bottom: fs-rem(6px);
-
-  @include mq($from: desktop) {
-    padding-bottom: fs-rem(10px);
-  }
-
-  &::before {
-    display: block;
-    width: fs-rem(2px);
-    height: fs-rem(22px);
-    margin-right: fs-rem(14px);
-    background-color: var(--color-primary-mid);
-    transform: rotate(40deg);
-    content: '';
-
-    @include mq($from: desktop) {
-      height: fs-rem(30px);
-      margin-right: fs-rem(18px);
-    }
+  @include mq($from: tablet) {
+    padding-bottom: fs-rem(80px);
   }
 }
 
