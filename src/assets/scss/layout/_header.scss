@@ -38,6 +38,11 @@
   z-index: var(--z-index-header-navigation);
   flex-grow: 1;
   height: 100%;
+  margin-right: fs-rem(-20px);
+
+  @include mq($from: headerMenu) {
+    margin-right: fs-rem(0);
+  }
 }
 
 /* button layout */
