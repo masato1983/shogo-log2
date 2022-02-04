@@ -119,6 +119,13 @@
   writing-mode: vertical-rl;
 }
 
+/* japaneses vertical (tablet) */
+.c-text--vertical-tablet {
+  @include mq($from: tablet) {
+    writing-mode: vertical-rl;
+  }
+}
+
 // ==========================================================================
 // xs, sm, md, lg, xl, 2xl size
 // ==========================================================================
