@@ -25,7 +25,7 @@ if (loadingElement) {
     setTimeout(function () {
         document.removeEventListener('touchmove', noScroll, { passive: false });
         document.removeEventListener('wheel', noScroll, { passive: false });
-    }, 4000);
+    }, 3200);
 }
 
 // AOS (Animation On Scroll)
@@ -93,6 +93,38 @@ blankSpace.addEventListener('click', function () {
     focusTrapOutsideClick.deactivate();
     enableBodyScroll(globalNavigation);
 });
+
+// header on scroll
+import 'intersection-observer';
+
+const header = document.querySelector('.l-header');
+const keyVisual = document.querySelector('.p-top-kv');
+
+const observerHeaderPinned = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                header.classList.remove('is-pinned');
+            } else {
+                header.classList.add('is-pinned');
+            }
+        });
+    },
+    { threshold: 0.5 },
+);
+
+const observerHeaderVisible = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            header.classList.remove('is-visible');
+        } else {
+            header.classList.add('is-visible');
+        }
+    });
+});
+
+observerHeaderPinned.observe(keyVisual);
+observerHeaderVisible.observe(keyVisual);
 
 // switch viewport
 !(function () {
