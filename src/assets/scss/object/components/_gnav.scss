@@ -25,6 +25,7 @@
     transition: opacity 0.3s var(--ease-in-out-cubic), visibility 0.3s var(--ease-in-out-cubic);
 
     &.is-active {
+      z-index: $z-index-header-menu-active;
       visibility: visible;
       opacity: 1;
     }

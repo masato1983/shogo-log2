@@ -12,7 +12,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: var(--z-index-loading);
+  z-index: $z-index-loading;
   display: flex;
   align-items: center;
   justify-content: center;

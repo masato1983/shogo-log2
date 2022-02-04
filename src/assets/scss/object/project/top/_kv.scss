@@ -17,12 +17,12 @@
 
 /* swiper layout */
 .p-top-kv__swiper {
-  z-index: var(--z-index-base);
+  z-index: $z-index-base;
 }
 
 /* swiper-wrapper layout */
 .p-top-kv__swiper-wrapper {
-  z-index: var(--z-index-base);
+  z-index: $z-index-base;
 }
 
 /* media layout */
