@@ -5,7 +5,7 @@
 @use '../../abstracts/' as *;
 @use 'sass:math' as *;
 
-/* header, footer logo */
+/* header logo */
 .c-logo__header {
   width: fs-rem(120px);
   height: fs-rem(26px);
@@ -14,5 +14,17 @@
   @include mq($from: desktop) {
     width: fs-rem(136px);
     height: fs-rem(29px);
+  }
+}
+
+/* footer logo */
+.c-logo__footer {
+  width: fs-rem(159px);
+  height: fs-rem(34px);
+  overflow: hidden; // Workaround for sideways scrolling problem in ie11
+
+  @include mq($from: tablet) {
+    width: fs-rem(271px);
+    height: fs-rem(58px);
   }
 }
