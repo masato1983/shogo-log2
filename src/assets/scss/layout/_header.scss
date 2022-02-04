@@ -7,10 +7,29 @@
 
 /* overall style */
 .l-header {
-  z-index: var(--z-index-header);
+  z-index: $z-index-header;
   width: 100vw; // Workaround body-scroll-lock bug
   margin-bottom: fs-rem(-1px); // Workaround the problem of gaps between header elements.
   background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
+}
+
+/* header on scroll */
+.l-header.is-pinned {
+  position: sticky;
+  top: 0;
+  z-index: $z-index-header-pinned; // Workaround being displayed momentarily when scrolling down.
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s var(--ease-in-out-cubic), visibility 1s var(--ease-in-out-cubic);
+  pointer-events: none;
+}
+
+.l-header.is-visible {
+  z-index: $z-index-header;
+  background: linear-gradient(to right, var(--color-primary-mid-alpha-middle), var(--color-neutral-darker-alpha-middle));
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* inner layout */
@@ -30,12 +49,13 @@
 
 /* logo layout */
 .l-header__logo {
-  z-index: var(--z-index-header-logo);
+  z-index: $z-index-header-logo;
 }
 
 /* navigation layout */
 .l-header__navigation {
-  z-index: var(--z-index-header-navigation);
+  position: relative;
+  z-index: $z-index-header-navigation;
   flex-grow: 1;
   height: 100%;
   margin-right: fs-rem(-20px);
@@ -47,7 +67,8 @@
 
 /* button layout */
 .l-header__button {
-  z-index: var(--z-index-header-button);
+  position: relative;
+  z-index: $z-index-header-button;
   width: fs-rem(60px);
   height: 100%;
   margin-left: auto;
@@ -60,8 +81,7 @@
 
 /* menu layout */
 .l-header__menu {
-  z-index: var(--z-index-header-menu);
-  // display: none;
+  z-index: $z-index-header-menu;
 
   @include mq($from: headerMenu) {
     display: block;
@@ -74,7 +94,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-index-header-blank-space);
+  z-index: $z-index-header-blank-space;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
