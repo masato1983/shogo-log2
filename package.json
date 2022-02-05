@@ -126,7 +126,7 @@
         "postcss-cli": "9.1.0",
         "postcss-clip-path-polyfill": "1.1.0",
         "postcss-flexbugs-fixes": "5.0.2",
-        "postcss-gap-properties": "3.0.2",
+        "postcss-gap-properties": "3.0.3",
         "postcss-object-fit-images": "1.1.2",
         "postcss-rem": "2.0.2",
         "postcss-viewport-height-correction": "1.1.1",
