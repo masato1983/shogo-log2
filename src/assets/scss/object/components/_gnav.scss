@@ -72,6 +72,7 @@
   .c-gnav__item {
     display: flex;
     align-items: center;
+    transform: color 3s var(--ease-in-out-cubic);
 
     &:nth-of-type(n+2) {
       &::before {
@@ -83,7 +84,17 @@
         background-color: var(--color-neutral-lightest);
         transform: rotate(atan2(22, 25));
         content: '';
+
+        /* header on scroll (pinned) */
+        .l-header.is-pinned & {
+          background-color: var(--color-neutral-mid);
+        }
       }
+    }
+
+    /* header on scroll (pinned) */
+    .l-header.is-pinned & {
+      color: var(--color-neutral-mid);
     }
   }
 
@@ -91,5 +102,10 @@
   .c-gnav__break {
     display: block;
     text-align: center;
+
+    /* header on scroll (pinned) */
+    .l-header.is-pinned & {
+      color: var(--color-neutral-mid);
+    }
   }
 }

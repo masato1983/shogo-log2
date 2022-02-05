@@ -13,20 +13,27 @@
   background: linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker));
 }
 
-/* header on scroll */
+/* header on scroll (pre-pinned) */
+.l-header.is-pre-pinned {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* header on scroll (pinned) */
 .l-header.is-pinned {
   position: sticky;
   top: 0;
-  z-index: $z-index-header-pinned; // Workaround being displayed momentarily when scrolling down.
+  background: var(--color-neutral-lightest);
   visibility: hidden;
   opacity: 0;
-  transition: opacity 1s var(--ease-in-out-cubic), visibility 1s var(--ease-in-out-cubic);
+  transition: opacity 0.7s var(--ease-in-out-cubic), visibility 0.7s var(--ease-in-out-cubic);
   pointer-events: none;
 }
 
+/* header on scroll (visible) */
 .l-header.is-visible {
   z-index: $z-index-header;
-  background: linear-gradient(to right, var(--color-primary-mid-alpha-middle), var(--color-neutral-darker-alpha-middle));
+  background: var(--color-neutral-lightest-alpha-middle);
   visibility: visible;
   opacity: 1;
   pointer-events: auto;

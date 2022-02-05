@@ -9,3 +9,11 @@
   $hamburger-bar-spacing: 5px,
   $hamburger-animations: ('chop')
 );
+
+.l-header.is-pinned .c-hamburger__line:nth-child(n-3) {
+  background-color: var(--color-neutral-mid);
+}
+
+.c-hamburger.is-active .c-hamburger__line:nth-child(n-3) {
+  background-color: var(--color-neutral-lightest);
+}

@@ -10,10 +10,21 @@
   width: fs-rem(120px);
   height: fs-rem(26px);
   overflow: hidden; // Workaround for sideways scrolling problem in ie11
+  transition: fill 0.3s var(--ease-in-out-cubic);
+  fill: var(--color-neutral-lightest);
 
   @include mq($from: desktop) {
     width: fs-rem(136px);
     height: fs-rem(29px);
+  }
+
+  // header on scroll (pinned)
+  .l-header.is-pinned & {
+    fill: var(--color-neutral-mid);
+  }
+
+  .l-header__logo.is-active & {
+    fill: var(--color-neutral-lightest);
   }
 }
 
