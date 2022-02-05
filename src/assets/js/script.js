@@ -8,24 +8,37 @@ import 'core-js/modules/es.string.repeat';
 import 'core-js/modules/es.promise';
 
 // loading animation
+import Cookies from 'js-cookie';
+
 const loadingElement = document.querySelector('.c-loading');
 
-if (loadingElement) {
-    function noScroll(event) {
-        event.preventDefault();
+if (!Cookies.get('accessdate')) {
+    if (loadingElement) {
+        function noScroll(event) {
+            event.preventDefault();
+        }
+
+        document.addEventListener('touchmove', noScroll, { passive: false });
+        document.addEventListener('wheel', noScroll, { passive: false });
+
+        setTimeout(function () {
+            loadingElement.classList.remove('is-loading');
+        }, 3000);
+
+        setTimeout(function () {
+            document.removeEventListener('touchmove', noScroll, { passive: false });
+            document.removeEventListener('wheel', noScroll, { passive: false });
+        }, 3200);
     }
 
-    document.addEventListener('touchmove', noScroll, { passive: false });
-    document.addEventListener('wheel', noScroll, { passive: false });
+    let date = new Date();
+    let loadingYear = String(date.getFullYear());
+    let loadingMonth = String(date.getMonth() + 1);
+    let loadingDate = String(date.getDate());
 
-    setTimeout(function () {
-        loadingElement.classList.remove('is-loading');
-    }, 3000);
-
-    setTimeout(function () {
-        document.removeEventListener('touchmove', noScroll, { passive: false });
-        document.removeEventListener('wheel', noScroll, { passive: false });
-    }, 3200);
+    Cookies.set('accessdate', loadingYear + loadingMonth + loadingDate, { expires: 1, secure: true, domain: 'shogo-log2.coding11ty.com' });
+} else {
+    loadingElement.classList.remove('is-loading');
 }
 
 // AOS (Animation On Scroll)
@@ -44,6 +57,7 @@ AOS.init({
 // hamburger menu toggle
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import * as focusTrap from 'focus-trap';
+const headerLogo = document.querySelector('.l-header__logo');
 const hamburgerButton = document.querySelector('.c-hamburger');
 const globalNavigation = document.querySelector('.c-gnav');
 const blankSpace = document.querySelector('.l-header__blank-space');
@@ -69,6 +83,7 @@ hamburgerButton.addEventListener('click', function () {
         this.setAttribute('aria-expanded', 'false');
         this.setAttribute('aria-label', 'menu');
         this.classList.remove('is-active');
+        headerLogo.classList.remove('is-active');
         globalNavigation.classList.remove('is-active');
         focusTrapOutsideClick.deactivate();
         blankSpace.classList.remove('is-active');
@@ -77,6 +92,7 @@ hamburgerButton.addEventListener('click', function () {
         this.setAttribute('aria-label', 'close menu');
         this.setAttribute('aria-expanded', 'true');
         this.classList.add('is-active');
+        headerLogo.classList.add('is-active');
         globalNavigation.classList.add('is-active');
         focusTrapOutsideClick.activate();
         blankSpace.classList.add('is-active');
@@ -88,6 +104,7 @@ blankSpace.addEventListener('click', function () {
     hamburgerButton.setAttribute('aria-expanded', 'false');
     hamburgerButton.setAttribute('aria-label', 'menu');
     hamburgerButton.classList.remove('is-active');
+    headerLogo.classList.remove('is-active');
     globalNavigation.classList.remove('is-active');
     this.classList.remove('is-active');
     focusTrapOutsideClick.deactivate();
@@ -100,6 +117,19 @@ import 'intersection-observer';
 const header = document.querySelector('.l-header');
 const keyVisual = document.querySelector('.p-top-kv');
 
+const observerHeaderPrePinned = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                header.classList.remove('is-pre-pinned');
+            } else {
+                header.classList.add('is-pre-pinned');
+            }
+        });
+    },
+    { threshold: 0.7 },
+);
+
 const observerHeaderPinned = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
@@ -110,7 +140,7 @@ const observerHeaderPinned = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.5 },
+    { threshold: 0.6 },
 );
 
 const observerHeaderVisible = new IntersectionObserver((entries) => {
@@ -123,6 +153,7 @@ const observerHeaderVisible = new IntersectionObserver((entries) => {
     });
 });
 
+observerHeaderPrePinned.observe(keyVisual);
 observerHeaderPinned.observe(keyVisual);
 observerHeaderVisible.observe(keyVisual);
 
@@ -138,21 +169,6 @@ observerHeaderVisible.observe(keyVisual);
     addEventListener('resize', switchViewport, false);
     switchViewport();
 })();
-
-// google maps API
-import { Loader } from '@googlemaps/js-api-loader';
-
-const loader = new Loader({
-    apiKey: 'AIzaSyA-9-cxgXhgarRUVwBLmA8FqacxlG2vbAA',
-    version: 'weekly',
-});
-
-loader.load().then(() => {
-    new google.maps.Map(document.getElementById('map'), {
-        center: { lat: 38.25313653376707, lng: 140.3421864589631 },
-        zoom: 16,
-    });
-});
 
 // object-fit-images
 import objectFitImages from 'object-fit-images';
