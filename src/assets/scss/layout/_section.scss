@@ -9,15 +9,6 @@
 // Section modifier
 // ==========================================================================
 
-/* service modifire */
-.l-section--service {
-  margin-top: fs-rem(120px);
-
-  @include mq($from: desktop) {
-    margin-top: fs-rem(160px);
-  }
-}
-
 /* about modifire */
 .l-section--about {
   margin-top: fs-rem(120px);
