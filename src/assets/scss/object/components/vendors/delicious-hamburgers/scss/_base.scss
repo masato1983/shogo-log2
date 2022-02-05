@@ -46,6 +46,7 @@
 
 /* inner style */
 .c-hamburger__inner {
+    display: block; // Because I changed from div tag to span tag. It can't put a div tag inside a button tag.
     margin: 0;
     margin-top: math.div(-$hamburger-thickness, 2);
     position: relative;
