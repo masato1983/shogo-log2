@@ -56,6 +56,8 @@
 .c-card__media {
   @include fs-aspect-ratio(div(375, 160));
 
+  z-index: $z-index-card-media;
+
   @include mq($from: tablet) {
     @include fs-aspect-ratio(div(472, 240));
 

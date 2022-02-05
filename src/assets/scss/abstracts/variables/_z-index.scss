@@ -23,4 +23,5 @@ $z-index-header-blank-space: calc($z-index-header-menu + $z-index-below); // z-i
 $z-index-loading: calc($z-index-header-logo + $z-index-above); // z-index: 30
 
 // card component
+$z-index-card-media: $z-index-base; // z-index: 0
 $z-index-card-number: calc($z-index-base + $z-index-above); // z-index: 10
