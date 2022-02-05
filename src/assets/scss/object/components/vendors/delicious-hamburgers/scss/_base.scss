@@ -74,7 +74,8 @@
     .c-hamburger--chop & {
         transition:
         transform math.div(0.3s, $hamburger-animation-speed) $hamburger-easing,
-        opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing;
+        opacity math.div(0.3s, $hamburger-animation-speed) $hamburger-easing,
+        background-color math.div(0.3s, $hamburger-animation-speed) $hamburger-easing;
 
         &:nth-child(1) {
             top: 0;
