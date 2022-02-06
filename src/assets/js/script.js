@@ -7,6 +7,14 @@ import 'core-js/modules/es.number.is-nan';
 import 'core-js/modules/es.string.repeat';
 import 'core-js/modules/es.promise';
 
+// smooth-scroll
+import SmoothScroll from 'smooth-scroll';
+new SmoothScroll('a[href*="#"]', {
+    speed: 350,
+    header: '[data-scroll-header]',
+    easing: 'easeOutQuint',
+});
+
 // loading animation
 import Cookies from 'js-cookie';
 
@@ -60,6 +68,7 @@ import * as focusTrap from 'focus-trap';
 const headerLogo = document.querySelector('.l-header__logo');
 const hamburgerButton = document.querySelector('.c-hamburger');
 const globalNavigation = document.querySelector('.c-gnav');
+const globalNavigationLinks = document.querySelectorAll('.c-gnav__link');
 const blankSpace = document.querySelector('.l-header__blank-space');
 const focusTrapOutsideClick = focusTrap.createFocusTrap('.c-gnav', {
     allowOutsideClick: true,
@@ -80,6 +89,7 @@ const focusTrapOutsideClick = focusTrap.createFocusTrap('.c-gnav', {
 
 hamburgerButton.addEventListener('click', function () {
     if (globalNavigation.classList.contains('is-active')) {
+        document.documentElement.style.minHeight = '';
         this.setAttribute('aria-expanded', 'false');
         this.setAttribute('aria-label', 'menu');
         this.classList.remove('is-active');
@@ -89,6 +99,7 @@ hamburgerButton.addEventListener('click', function () {
         blankSpace.classList.remove('is-active');
         enableBodyScroll(globalNavigation);
     } else {
+        document.documentElement.style.minHeight = '100vh'; // https://twitter.com/tak_dcxi/status/1455569725941948417
         this.setAttribute('aria-label', 'close menu');
         this.setAttribute('aria-expanded', 'true');
         this.classList.add('is-active');
@@ -100,14 +111,29 @@ hamburgerButton.addEventListener('click', function () {
     }
 });
 
+globalNavigationLinks.forEach(function (globalNavigationLink) {
+    globalNavigationLink.addEventListener('click', function () {
+        document.documentElement.style.minHeight = '';
+        hamburgerButton.setAttribute('aria-expanded', 'false');
+        hamburgerButton.setAttribute('aria-label', 'menu');
+        hamburgerButton.classList.remove('is-active');
+        headerLogo.classList.remove('is-active');
+        globalNavigation.classList.remove('is-active');
+        focusTrapOutsideClick.deactivate();
+        blankSpace.classList.remove('is-active');
+        enableBodyScroll(globalNavigation);
+    });
+});
+
 blankSpace.addEventListener('click', function () {
+    document.documentElement.style.minHeight = '';
     hamburgerButton.setAttribute('aria-expanded', 'false');
     hamburgerButton.setAttribute('aria-label', 'menu');
     hamburgerButton.classList.remove('is-active');
     headerLogo.classList.remove('is-active');
     globalNavigation.classList.remove('is-active');
-    this.classList.remove('is-active');
     focusTrapOutsideClick.deactivate();
+    this.classList.remove('is-active');
     enableBodyScroll(globalNavigation);
 });
 
