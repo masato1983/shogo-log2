@@ -1,6 +1,6 @@
 <header class="l-header">
     <div class="l-containe l-container__padding--narrow l-container__max-width--xl">
-        <div class="l-header__inner">
+        <div class="l-header__inner" data-scroll-header="true">
             <div class="l-header__logo">
                 <a class="c-logo__link" href="<%= path['root'] %>">
                     <% if (page === 'top') { %>
@@ -62,22 +62,22 @@
                 <div class="l-header__menu c-gnav">
                     <ul class="c-gnav__list">
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>">トップ<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">top</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-kv">トップ<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">top</span></a>
                         </li>
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>service.html">事業内容<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">services</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-service">事業内容<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">services</span></a>
                         </li>
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>about.html">園崎組について<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">about</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-about">園崎組について<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">about</span></a>
                         </li>
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>works.html">園崎組の実績<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">works</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-works">園崎組の実績<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">works</span></a>
                         </li>
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>recruit.html">採用情報<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">recruit</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-recruit">採用情報<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">recruit</span></a>
                         </li>
                         <li class="c-gnav__item c-text--white">
-                            <a href="<%= path['root'] %>contact.html">お問い合わせ<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">contact</span></a>
+                            <a class="c-gnav__link" data-scroll href="#top-contact">お問い合わせ<span class="c-gnav__break c-text__xs c-text--english c-text--uppercase">contact</span></a>
                         </li>
                     </ul>
                 </div>
