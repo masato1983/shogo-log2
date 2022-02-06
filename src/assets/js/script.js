@@ -90,6 +90,8 @@ const focusTrapOutsideClick = focusTrap.createFocusTrap('.c-gnav', {
 hamburgerButton.addEventListener('click', function () {
     if (globalNavigation.classList.contains('is-active')) {
         document.documentElement.style.minHeight = '';
+        document.documentElement.style.background = 'linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker))';
+        document.documentElement.style.backgroundColor = '';
         this.setAttribute('aria-expanded', 'false');
         this.setAttribute('aria-label', 'menu');
         this.classList.remove('is-active');
@@ -100,6 +102,8 @@ hamburgerButton.addEventListener('click', function () {
         enableBodyScroll(globalNavigation);
     } else {
         document.documentElement.style.minHeight = '100vh'; // https://twitter.com/tak_dcxi/status/1455569725941948417
+        document.documentElement.style.background = 'var(--color-primary-mid'; // Background when the address bar of the phone's ganv is lowered
+        document.documentElement.style.backgroundColor = 'var(--color-primary-mid)'; // Background when the address bar of the phone's ganv is lowered
         this.setAttribute('aria-label', 'close menu');
         this.setAttribute('aria-expanded', 'true');
         this.classList.add('is-active');
@@ -114,6 +118,8 @@ hamburgerButton.addEventListener('click', function () {
 globalNavigationLinks.forEach(function (globalNavigationLink) {
     globalNavigationLink.addEventListener('click', function () {
         document.documentElement.style.minHeight = '';
+        document.documentElement.style.background = 'linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker))';
+        document.documentElement.style.backgroundColor = '';
         hamburgerButton.setAttribute('aria-expanded', 'false');
         hamburgerButton.setAttribute('aria-label', 'menu');
         hamburgerButton.classList.remove('is-active');
@@ -127,6 +133,8 @@ globalNavigationLinks.forEach(function (globalNavigationLink) {
 
 blankSpace.addEventListener('click', function () {
     document.documentElement.style.minHeight = '';
+    document.documentElement.style.background = 'linear-gradient(to right, var(--color-primary-mid), var(--color-neutral-darker))';
+    document.documentElement.style.backgroundColor = '';
     hamburgerButton.setAttribute('aria-expanded', 'false');
     hamburgerButton.setAttribute('aria-label', 'menu');
     hamburgerButton.classList.remove('is-active');
