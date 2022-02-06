@@ -11,7 +11,7 @@
         <!-- main section -->
         <main class="l-main">
             <!-- top-kv -->
-            <div class="p-top-kv">
+            <div id="top-kv" class="p-top-kv">
                 <div class="l-container l-container__max-width--xl">
                     <div class="p-top-kv__inner">
                         <div class="p-top-kv__swiper swiper">
@@ -77,13 +77,13 @@
 
             <div class="l-main__inner">
                 <!-- service section -->
-                <section class="p-top-service l-section--service" data-aos="fade-in">
+                <section id="top-service" class="p-top-service l-section--service" data-aos="fade-in">
                     <div class="l-container l-container__max-width--xl">
                         <div class="p-top-service__inner">
                             <div class="p-top-service__media">
                                 <picture>
                                     <source sizes="(min-width: 2040px) 871px, (min-width: 1080px) 42.23vw, 100vw" type="image/webp" srcset="<%= path['img:top'] %>top-services-396x282.webp 396w, <%= path['img:top'] %>top-services-620x440.webp 620w, <%= path['img:top'] %>top-services-792x564.webp 792w, <%= path['img:top'] %>top-services-1240x880.webp 1240w, <%= path['img:top'] %>top-services-1860x1320.webp 1860w" />
-                                    <img class="p-top-service__image" width="792" height="564" src="<%= path['top:img'] %>top-service-01-792x564.png" sizes="(min-width: 2040px) 871px, (min-width: 1080px) 42.23vw, 100vw" srcset="<%= path['img:top'] %>top-services-396x282.png 396w, <%= path['img:top'] %>top-services-620x440.png 620w, <%= path['img:top'] %>top-services-792x564.png 792w, <%= path['img:top'] %>top-services-1240x880.png 1240w, <%= path['img:top'] %>top-services-1860x1320.webp 1860w" alt="" decoding="async" loading="lazy" />
+                                    <img class="p-top-service__image" width="792" height="564" src="<%= path['img:top'] %>top-service-01-792x564.png" sizes="(min-width: 2040px) 871px, (min-width: 1080px) 42.23vw, 100vw" srcset="<%= path['img:top'] %>top-services-396x282.png 396w, <%= path['img:top'] %>top-services-620x440.png 620w, <%= path['img:top'] %>top-services-792x564.png 792w, <%= path['img:top'] %>top-services-1240x880.png 1240w, <%= path['img:top'] %>top-services-1860x1320.webp 1860w" alt="" decoding="async" loading="lazy" />
                                 </picture>
                             </div>
                             <div class="p-top-service__body">
@@ -96,7 +96,7 @@
                                     <p class="p-top-service__text c-text__md"><span class="u-break-desktop">私達のモットーは、「社会基盤から世界をより良くする」こと。</span><span class="u-break-desktop">そのために最前線で国家規模のプロフェクトに参画することもあれば、</span><span class="u-break-desktop">世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も</span><span class="u-break-desktop">同時に行うことで、業界の進化の促進を担っています。</span></p>
                                 </div>
                                 <div class="l-section__button--service p-top-service__button">
-                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="">
                                         <span>事業内容を更に知る</span>
                                         <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -110,7 +110,7 @@
                 <!-- end service section -->
 
                 <!-- about section -->
-                <section class="p-top-about l-section--about" data-aos="fade-in">
+                <section id="top-about" class="p-top-about l-section--about" data-aos="fade-in">
                     <div class="l-container l-container__width--normal l-container__max-width--md">
                         <div class="p-top-about__inner">
                             <div class="p-top-about__media u-full-bleed-tablet">
@@ -130,7 +130,7 @@
                                     <p class="p-top-about__text c-text__md"><span class="u-break-desktop">園崎組は埼玉県秩父市にて、主に土木工事にて</span><span class="u-break-desktop">社会基盤を支える企業になります。</span><br class="u-visible-sp" /><span class="u-break-desktop">また、自社工場において施工に必要とされる</span><span class="u-break-desktop">各種資材も生産しており、各業者に提供することで、</span><span class="u-break-desktop">社会基盤の構築・整備に貢献しております。</span></p>
                                 </div>
                                 <div class="l-section__button--about p-top-about__button">
-                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="">
                                         <span>詳しく見る</span>
                                         <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -150,7 +150,7 @@
                 <!-- end about section -->
 
                 <!-- works section -->
-                <section class="p-top-works l-section--works" data-aos="fade-in">
+                <section id="top-works" class="p-top-works l-section--works" data-aos="fade-in">
                     <div class="l-container l-container__width--normal l-container__max-width--sm">
                         <div class="p-top-works__inner">
                             <div class="l-section__header">
@@ -164,7 +164,7 @@
                             <div class="p-top-works__body">
                                 <ul class="p-top-works__list">
                                     <li class="p-top-works__item">
-                                        <a href="#" class="c-card">
+                                        <a href="" class="c-card">
                                             <div class="c-card__media u-full-bleed-mobile">
                                                 <span class="c-card__number c-text__lg c-text--white">01</span>
                                                 <picture>
@@ -179,7 +179,7 @@
                                         </a>
                                     </li>
                                     <li class="p-top-works__item">
-                                        <a href="#" class="c-card">
+                                        <a href="" class="c-card">
                                             <div class="c-card__media u-full-bleed-mobile">
                                                 <span class="c-card__number c-text__lg c-text--white">02</span>
                                                 <picture>
@@ -195,7 +195,7 @@
                                     </li>
                                 </ul>
                                 <div class="l-section__button--works p-top-works__button">
-                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                    <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="">
                                         <span>実績一覧を見る</span>
                                         <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -209,7 +209,7 @@
                 <!-- end works section -->
 
                 <!-- recruit section -->
-                <section class="p-top-recruit l-section--recruit" data-aos="fade-in">
+                <section id="top-recruit" class="p-top-recruit l-section--recruit" data-aos="fade-in">
                     <div class="p-top-recruit__inner">
                         <div class="p-top-recruit__header">
                             <div class="l-container l-container__width--normal l-container__max-width--md">
@@ -229,7 +229,7 @@
                                                 <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-01-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-01-312x240.png 312w, <%= path['img:top'] %>top-recruit-01-624x480.png 624w, <%= path['img:top'] %>top-recruit-01-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                             </picture>
                                             <div class="p-top-recruit__article-title">
-                                                <a class="c-button c-button--recruit" href="#">
+                                                <a class="c-button c-button--recruit" href="">
                                                     <p class="c-text--white">園崎組を知る</p>
                                                     <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -245,7 +245,7 @@
                                                 <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-02-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-02-312x240.png 312w, <%= path['img:top'] %>top-recruit-02-624x480.png 624w, <%= path['img:top'] %>top-recruit-02-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                             </picture>
                                             <div class="p-top-recruit__article-title">
-                                                <a class="c-button c-button--recruit" href="#">
+                                                <a class="c-button c-button--recruit" href="">
                                                     <p class="c-text--white">園崎組の一日</p>
                                                     <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -261,7 +261,7 @@
                                                 <img class="p-top-recruit__image" width="624" height="480" src="<%= path['img:top'] %>top-recruit-03-624x480.png" sizes="(min-width: 1200px) 315px, (min-width: 740px) 27.05vw, 100vw" srcset="<%= path['img:top'] %>top-recruit-03-312x240.png 312w, <%= path['img:top'] %>top-recruit-03-624x480.png 624w, <%= path['img:top'] %>top-recruit-03-936x720.png 936w" alt="" decoding="async" loading="lazy" />
                                             </picture>
                                             <div class="p-top-recruit__article-title">
-                                                <a class="c-button c-button--recruit" href="#">
+                                                <a class="c-button c-button--recruit" href="">
                                                     <p class="c-text--white">求める人物像</p>
                                                     <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -273,7 +273,7 @@
                                 </ul>
                             </div>
                             <div class="l-section__button--recruit p-top-recruit__button">
-                                <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                <a class="c-button c-button--medium c-button--primary c-button--shadow c-button--icon c-text--white" href="">
                                     <span>エントリーはこちら</span>
                                     <svg class="c-button__arrow c-icon c-icon__arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke="#FFF" fill="none" d="M.499 5.499h16l-4.5-3.999" />
@@ -286,7 +286,7 @@
                 <!-- end recruit section -->
 
                 <!-- contact section -->
-                <section class="p-top-contact" data-aos="fade-in">
+                <section id="top-contact" class="p-top-contact" data-aos="fade-in">
                     <div class="p-top-contact__inner">
                         <div class="p-top-contact__media">
                             <picture>
@@ -309,7 +309,7 @@
                                 </div>
                                 <div class="p-top-contact__footer">
                                     <div class="l-section__button--contact p-top-contact__button">
-                                        <a class="c-button c-button--large c-button--secondary c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                        <a class="c-button c-button--large c-button--secondary c-button--shadow c-button--icon c-text--white" href="">
                                             <svg class="c-button__icon c-icon c-icon__backhoe" viewBox="0 0 16 12" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     fill-rule="evenodd"
@@ -324,7 +324,7 @@
                                         </a>
                                     </div>
                                     <div class="l-section__button--contact p-top-contact__button">
-                                        <a class="c-button c-button--large c-button--black c-button--shadow c-button--icon c-text--white" href="<%= path['root'] %>service.html">
+                                        <a class="c-button c-button--large c-button--black c-button--shadow c-button--icon c-text--white" href="">
                                             <svg class="c-button__icon c-icon c-icon__factory" viewBox="0 0 14 12" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" fill="#FFF" d="M9.507 11.999H0V0l4.492 2.687V0l4.492 2.687V0l5.015 2.999v9H9.507zm-3.88-6H3.761v1.914h1.866V5.999zm4.611 0H8.372v1.914h1.866V5.999z" />
                                             </svg>
