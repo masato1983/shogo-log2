@@ -135,7 +135,7 @@
         "sass": "1.49.7",
         "sass-mq": "6.0.0",
         "stylelint": "14.3.0",
-        "stylelint-config-rational-order-fix": "0.1.8",
+        "stylelint-config-rational-order-fix": "0.1.9",
         "stylelint-config-recommended-scss": "5.0.2",
         "stylelint-config-sass-guidelines": "9.0.1",
         "stylelint-config-standard": "24.0.0",
